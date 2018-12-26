@@ -1,5 +1,19 @@
 ﻿l_english:
 
+ district_hab_foundry:0 "Foundry District"
+ district_hab_foundry_plural:0 "Foundry Districts"
+ district_hab_foundry_desc:1 "The low-gs and hard vacuum of space lends itself to well for these habitat smelters and metallurgists."
+ 
+ decision_district_habitat_too_many_districts:0 "£trigger_no£ This habitat has too many districts built on it."
+ 
+ decision_trade_district_habitat:0 "Establish Trade District"
+ decision_trade_district_habitat_desc:1 "This habitat will be considered a center of commerce, enabling the construction of $district_hab_commercial_plural$."
+ decision_trade_district_habitat_effects_short:0 "Enables construction of £district£ §Y$district_hab_commercial_plural$§! on this habitat\n\nCreates §Y1§! new §Y$district_hab_commercial$§!"
+ decision_remove_trade_district_habitat:0 "Remove Trade District"
+ decision_remove_trade_district_habitat_desc:1 "This habitat will no longer be considered a commercial center, freeing up space for new constructions."
+ decision_remove_trade_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_commercial_plural$§! on this habitat"
+ decision_remove_trade_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_commercial_plural$§! slots on the habitat must be dismanteled"
+ 
  utopia.61.name:0 "[From.From.From.Planet.GetName] Habitat Complete"
  utopia.61.desc.a:0 "We have completed the construction of our first habitat and it is finally time to ready a colony vessel and make landfall on a world we ourselves have created.\n\nFrom its mechanized core to its highest mountains, every nut, bolt, creek and cranny has been designed to fit our needs perfectly in our new home among the stars."
  utopia.61.desc.b:0 "The [From.From.From.Planet.GetName] habitat is now complete and ready for colonization."
