@@ -1,6 +1,7 @@
 #root = planet
 
-# Habitat
+# Habitat General
+# Does Nothing
 col_habitat = {
 	icon = 12
 
@@ -63,6 +64,7 @@ col_habitat = {
 }
 
 # Generator Habitat
+# Increases Technician Production by 5%
 col_habitat_generator = {
 	icon = 12
 
@@ -127,6 +129,7 @@ col_habitat_generator = {
 }
 
 # Foundry Habitat
+# Increases Metallurgist Production by 5%
 col_habitat_foundry = {
 	icon = 12
 
@@ -303,6 +306,7 @@ col_habitat_foundry = {
 }
 
 # Research Habitat
+# Increases Research by 5%
 col_habitat_research = {
 	icon = 12
 
@@ -478,23 +482,234 @@ col_habitat_research = {
 	}	
 }
 
+# Trade Habitat
+# Creates 2 Merchant Jobs
+col_habitat_trade = {
+	icon = 12
+
+	potential = {
+		is_planet_class = pc_habitat
+	}
+	
+	planet_modifier = {
+		job_merchant_add = 2
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_planet_flag = trade_habitat	
+		}
+		modifier = {
+			add = 2
+			num_buildings = { type = building_commercial_zone value > 0 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_commercial_zone value > 1 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_commercial_zone value > 2 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_commercial_zone value > 3 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_commercial_zone value > 4 }		
+		}
+		modifier = {
+			add = 2
+			num_buildings = { type = building_commercial_zone value > 5 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_commercial_zone value > 6 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_commercial_zone value > 7 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_commercial_zone value > 8 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_commercial_zone value > 9 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_commercial_megaplex value > 0 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_commercial_megaplex value > 1 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_commercial_megaplex value > 2 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_commercial_megaplex value > 3 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_commercial_megaplex value > 4 }		
+		}
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_commercial_megaplex value > 5 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_commercial_megaplex value > 6 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_commercial_megaplex value > 7 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_commercial_megaplex value > 8 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_commercial_megaplex value > 9 }		
+		}
+		modifier = {
+			add = 50
+			num_buildings = { type = building_galactic_stock_exchange value > 0 }		
+		}		
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_commercial value > 0 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_commercial value > 1 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_commercial value > 2 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_commercial value > 3 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_commercial value > 4 }		
+		}
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_commercial value > 5 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_commercial value > 6 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_commercial value > 7 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_commercial value > 8 }		
+		}
+	}
+}
+
+
+# Hydroponics Habitat
+col_habitat_farming = {
+	icon = 3
+
+	potential = {
+		is_planet_class = pc_habitat
+		exists = owner
+	}
+	
+	planet_modifier = {
+		planet_farmers_produces_mult = 0.05
+	}
+
+	weight_modifier = {	
+		modifier = {
+			add = 1
+			has_building = building_food_processing_facility
+		}
+		modifier = {
+			add = 2
+			has_building = building_food_processing_center
+		}		
+		modifier = {
+			add = 1
+			num_buildings = { type = building_hydroponics_farm value > 0 }		
+		}	
+		modifier = {
+			add = 1
+			num_buildings = { type = building_hydroponics_farm value > 1 }		
+		}	
+		modifier = {
+			add = 1
+			num_buildings = { type = building_hydroponics_farm value > 2 }		
+		}	
+		modifier = {
+			add = 1
+			num_buildings = { type = building_hydroponics_farm value > 3 }		
+		}	
+		modifier = {
+			add = 1
+			num_buildings = { type = building_hydroponics_farm value > 4 }		
+		}	
+		modifier = {
+			add = 1
+			num_buildings = { type = building_hydroponics_farm value > 5 }		
+		}	
+		modifier = {
+			add = 1
+			num_buildings = { type = building_hydroponics_farm value > 6 }		
+		}	
+		modifier = {
+			add = 1
+			num_buildings = { type = building_hydroponics_farm value > 7 }		
+		}	
+		modifier = {
+			add = 1
+			num_buildings = { type = building_hydroponics_farm value > 8 }		
+		}	
+		modifier = {
+			add = 1
+			num_buildings = { type = building_hydroponics_farm value > 9 }		
+		}			
+	}	
+}
+
 # Void Habitat
 # Origins Civics
+# Increases Pop Growth Speed
 col_habitat_void = {
 	icon = 12
 
 	potential = {
 		is_planet_class = pc_habitat
-		has_planet_flag = void_habitat
 	}
 
 	weight_modifier = {
-		base = 500
+		modifier = {
+			add = 500
+			has_planet_flag = void_habitat		
+		}
 	}
 }
 
 # Habitat
-col_habitat = {
+# Unused?
+col_habitat_old = {
 	icon = 12
 
 	potential = {
@@ -502,7 +717,7 @@ col_habitat = {
 	}
 
 	weight_modifier = {
-		base = 500
+		base = 0
 	}
 }
 
