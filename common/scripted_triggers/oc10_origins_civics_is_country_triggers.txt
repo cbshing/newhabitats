@@ -1,0 +1,184 @@
+# Origins Civics Is Country Type Triggers
+# by cbshing
+#
+# Each of these triggers represents various civic archetypes that may trigger varying gameplay elements
+# This is used for story quests
+# Each Civic can be disabled by commenting out the related "has_valid_civic" line in this code
+# And adding an invalid check (such as has_country_flag = invalid_oc_country).
+# This would allow for the code to remain the same, but only alter the lines here.
+#
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+# is type of country
+
+# scope: country 
+oc_is_from_earth = {
+	OR = {
+		oc_is_same_species_as_earth = yes
+		has_oc_colony_of_earth_civic  = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_same_species_as_earth = {
+	OR = {
+		has_oc_colony_of_man_civic  = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# for Ulysses Initiative Addon
+# scope: country 
+oc_is_ulysses_initiative_country = {
+	OR = {
+		has_country_flag = human_2
+		has_country_flag = human_3
+		has_country_flag = human_4
+		has_country_flag = human_5
+		has_country_flag = human_6
+	}
+}
+
+
+# scope: country 
+oc_is_fallen_colonies_country = {
+	OR = {
+		has_oc_fallen_colony_civic = yes
+		has_oc_fallen_enclave_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_habitat_country = {
+	OR = {
+		oc_is_habitat_preference_country = yes
+		has_oc_habitat_life_civic = yes
+		has_oc_hive_habitat_life_civic = yes
+		has_oc_robo_voidborne_mechanisms_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_gaia_country = {
+	OR = {
+		oc_is_gaia_preference_country = yes
+		has_oc_paradise_life_civic = yes
+		has_oc_hive_paradise_life_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_nuked_country = {
+	OR = {
+		has_valid_civic = civic_post_apocalyptic
+		has_valid_civic = civic_machine_terminator 
+		has_oc_nuclear_vault_civic = yes
+		has_oc_nuclear_mutation_civic = yes
+		has_oc_worm_loved_civic = yes
+		has_oc_hive_nuclear_vault_civic = yes
+		has_oc_hive_post_apocalyptic_civic = yes
+		has_oc_hive_nuclear_mutation_civic = yes
+		has_oc_robo_nuked_start_civic = yes
+		has_oc_corp_nuclear_vault_civic = yes
+		has_oc_corp_post_apocalyptic_civic = yes
+		has_oc_corp_nuclear_mutation_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_hive_world_country = {
+	OR = {
+		has_oc_hive_hive_world_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_machine_world_country = {
+	OR = {
+		has_oc_robo_machine_world_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_ringworld_country = {
+	OR = {
+		oc_is_ringworld_preference_country = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_habitat_preference_country = {
+	OR = {
+		has_oc_voidborne_civic = yes
+		has_oc_hive_voidborne_civic = yes
+		has_country_flag = starts_with_habitat_preference
+	}
+}
+
+# scope: country 
+oc_is_gaia_preference_country = {
+	OR = {
+		has_valid_civic = civic_life_seeded
+		has_oc_hive_life_seeded_civic = yes
+		has_oc_corp_life_seeded_civic = yes
+		has_country_flag = starts_with_gaia_preference
+	}
+}
+
+# scope: country 
+oc_is_nuked_preference_country = {
+	OR = {
+		has_oc_nuclear_mutation_civic  = yes
+		has_oc_worm_loved_civic = yes
+		has_oc_hive_nuclear_mutation_civic = yes
+		has_oc_corp_nuclear_mutation_civic = yes
+		has_country_flag = starts_with_nuked_preference
+	}
+}
+
+# scope: country 
+oc_is_ringworld_preference_country = {
+	OR = {
+		has_oc_ringborne_civic = yes
+		has_country_flag = starts_with_ringworld_preference
+	}
+}
+
+# scope: country 
+oc_is_isolated_civics = {
+	OR = {
+		has_oc_n_cluster_civic = yes
+		has_oc_dyson_engineers_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_primitive_colonies_civics = {
+	OR = {
+		has_oc_primitive_lost_colony_civic = yes
+		has_oc_primitive_fallen_colony_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
