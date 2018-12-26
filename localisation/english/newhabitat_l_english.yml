@@ -2,7 +2,7 @@
 
  district_hab_foundry:0 "Foundry District"
  district_hab_foundry_plural:0 "Foundry Districts"
- district_hab_foundry_desc:1 "The low-gs and hard vacuum of space lends itself to well for these habitat smelters and metallurgists."
+ district_hab_foundry_desc:1 "The habitat's access to low-gs and the hard vacuum of space lends itself to well for these smelters and metallurgists."
  
  decision_district_habitat_too_many_districts:0 "£trigger_no£ This habitat has too many districts built on it."
  
@@ -13,6 +13,54 @@
  decision_remove_trade_district_habitat_desc:1 "This habitat will no longer be considered a commercial center, freeing up space for new constructions."
  decision_remove_trade_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_commercial_plural$§! on this habitat"
  decision_remove_trade_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_commercial_plural$§! slots on the habitat must be dismanteled"
+ 
+ decision_cultural_district_habitat:0 "Establish Leisure District"
+ decision_cultural_district_habitat_desc:1 "This habitat will be considered a center of entertainment, enabling the construction of $district_hab_cultural_plural$."
+ decision_cultural_district_habitat_effects_short:0 "Enables construction of £district£ §Y$district_hab_cultural_plural$§! on this habitat\n\nCreates §Y1§! new §Y$district_hab_cultural$§!"
+ decision_remove_cultural_district_habitat:0 "Remove Leisure District"
+ decision_remove_cultural_district_habitat_desc:1 "This habitat will no longer be considered an entertainment center, freeing up space for new constructions."
+ decision_remove_cultural_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_cultural_plural$§! on this habitat"
+ decision_remove_leisure_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_cultural_plural$§! slots on the habitat must be dismanteled"
+ 
+ decision_research_district_habitat:0 "Establish Research District"
+ decision_research_district_habitat_desc:1 "This habitat will be considered a center of research, enabling the construction of $district_hab_science_plural$."
+ decision_research_district_habitat_effects_short:0 "Enables construction of £district£ §Y$district_hab_science_plural$§! on this habitat\n\nCreates §Y1§! new §Y$district_hab_science$§!"
+ decision_remove_research_district_habitat:0 "Remove Research District"
+ decision_remove_research_district_habitat_desc:1 "This habitat will no longer be considered a research center, freeing up space for new constructions."
+ decision_remove_research_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_science_plural$§! on this habitat"
+ decision_remove_research_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_science_plural$§! slots on the habitat must be dismanteled"
+ 
+ decision_energy_district_habitat:0 "Establish Generator District"
+ decision_energy_district_habitat_desc:1 "This habitat will focus on collecting solar energy, enabling the construction of $district_hab_energy_plural$."
+ decision_energy_district_habitat_effects_short:0 "Enables construction of £district£ §Y$district_hab_energy_plural$§! on this habitat\n\nCreates §Y1§! new §Y$district_hab_energy$§!"
+ decision_remove_energy_district_habitat:0 "Remove Generator District"
+ decision_remove_energy_district_habitat_desc:1 "This habitat will no longer focus on collecting energy, freeing up space for new constructions."
+ decision_remove_energy_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_energy_plural$§! on this habitat"
+ decision_remove_energy_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_energy_plural$§! slots on the habitat must be dismanteled"
+
+ decision_foundry_district_habitat:0 "Establish Foundry District"
+ decision_foundry_district_habitat_desc:1 "This habitat will focus on the manufacturing of alloys, enabling the construction of $district_hab_foundry_plural$."
+ decision_foundry_district_habitat_effects_short:0 "Enables construction of £district£ §Y$district_hab_foundry_plural$§! on this habitat\n\nCreates §Y1§! new §Y$district_hab_foundry$§!"
+ decision_remove_foundry_district_habitat:0 "Remove Foundry District"
+ decision_remove_foundry_district_habitat_desc:1 "This habitat will no longer focus on alloy manufacturing, freeing up space for new constructions."
+ decision_remove_foundry_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_foundry_plural$§! on this habitat"
+ decision_remove_foundry_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_foundry_plural$§! slots on the habitat must be dismanteled"
+
+ col_habitat_generator:0 "Generator Habitat"
+ col_habitat_generator_desc:1 "An artificial deep-space arcology humming with complexes of generator plants processing solar energy."
+ col_habitat_foundry:0 "Foundry Habitat"
+ col_habitat_foundry_desc:1 "An artificial deep-space arcology tooled towards the processing of raw materials into alloys."
+ col_habitat_research:0 "Research Habitat"
+ col_habitat_research_desc:1 "An artificial deep-space arcology focused on scientific research and technological achievement."
+ col_habitat_trade:0 "Trade Habitat"
+ col_habitat_trade_desc:1 "An artificial deep-space arcology devouted to merchants and clerks conducting interstellar trade."
+ col_habitat_leisure:0 "Leisure Habitat"
+ col_habitat_leisure_desc:1 "An artificial deep-space arcology focused on entertainment and tourism."
+ col_habitat_residential:0 "Residential Habitat"
+ col_habitat_residential_desc:1 "A densely populated artificial deep-space arcology catering towards housing and population growth."
+ col_habitat_void:0 "Void Habitat"
+ col_habitat_void_desc:1 "A small artificial deep-space arcology whose populace benefits from the low gravity."
+ 
  
  utopia.61.name:0 "[From.From.From.Planet.GetName] Habitat Complete"
  utopia.61.desc.a:0 "We have completed the construction of our first habitat and it is finally time to ready a colony vessel and make landfall on a world we ourselves have created.\n\nFrom its mechanized core to its highest mountains, every nut, bolt, creek and cranny has been designed to fit our needs perfectly in our new home among the stars."
