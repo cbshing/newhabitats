@@ -10,12 +10,54 @@ col_habitat = {
 	
 	weight_modifier = {
 		modifier = {
-			add = 5
-			num_districts = { type = district_generator value = 0 }		
-		}
-		modifier = {
-			add = 5
-			num_districts = { type = district_generator value = 0 }		
+			add = 500
+			OR = { # has more then 2 habitat types
+				AND = {
+					has_planet_flag = energy_habitat
+					OR = {
+						has_planet_flag = foundry_habitat
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+					}
+				}
+				AND = {
+					has_planet_flag = foundry_habitat
+					OR = {
+						has_planet_flag = energy_habitat
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+					}
+				}
+				AND = {
+					has_planet_flag = trade_habitat
+					OR = {
+						has_planet_flag = energy_habitat
+						has_planet_flag = foundry_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+					}
+				}
+				AND = {
+					has_planet_flag = cultural_habitat
+					OR = {
+						has_planet_flag = energy_habitat
+						has_planet_flag = foundry_habitat
+						has_planet_flag = trade_habitat
+						has_planet_flag = research_habitat
+					}
+				}
+				AND = {
+					has_planet_flag = research_habitat
+					OR = {
+						has_planet_flag = energy_habitat
+						has_planet_flag = foundry_habitat
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+					}
+				}
+			}
 		}
 	}
 }
@@ -33,6 +75,10 @@ col_habitat_generator = {
 	}
 
 	weight_modifier = {
+		modifier = {
+			add = 5
+			has_planet_flag = energy_habitat	
+		}
 		modifier = {
 			add = 1
 			num_districts = { type = district_generator value > 0 }		
@@ -63,6 +109,14 @@ col_habitat_generator = {
 		}
 		modifier = {
 			add = 1
+			num_districts = { type = district_generator value > 7 }		
+		}
+		modifier = {
+			add = 1
+			num_districts = { type = district_generator value > 8 }		
+		}
+		modifier = {
+			add = 1
 			has_building = building_energy_grid
 		}
 		modifier = {
@@ -72,8 +126,8 @@ col_habitat_generator = {
 	}
 }
 
-# Forge Habitat
-col_habitat_forge = {
+# Foundry Habitat
+col_habitat_foundry = {
 	icon = 12
 
 	potential = {
@@ -85,6 +139,10 @@ col_habitat_forge = {
 	}
 
 	weight_modifier = {
+		modifier = {
+			add = 5
+			has_planet_flag = foundry_habitat	
+		}
 		modifier = {
 			add = 2
 			num_buildings = { type = building_foundry_1 value > 0 }		
@@ -207,48 +265,227 @@ col_habitat_forge = {
 		}	
 		modifier = {
 			add = 1
-			num_districts = { type = district_arcology_arms_industry value > 0 }		
+			num_districts = { type = district_hab_foundry value > 0 }		
 		}	
 		modifier = {
 			add = 1
-			num_districts = { type = district_arcology_arms_industry value > 1 }		
+			num_districts = { type = district_hab_foundry value > 1 }		
 		}	
 		modifier = {
 			add = 1
-			num_districts = { type = district_arcology_arms_industry value > 2 }		
+			num_districts = { type = district_hab_foundry value > 2 }		
 		}	
 		modifier = {
 			add = 1
-			num_districts = { type = district_arcology_arms_industry value > 3 }		
+			num_districts = { type = district_hab_foundry value > 3 }		
 		}	
 		modifier = {
 			add = 1
-			num_districts = { type = district_arcology_arms_industry value > 4 }		
+			num_districts = { type = district_hab_foundry value > 4 }		
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_arcology_arms_industry value > 5 }		
+			num_districts = { type = district_hab_foundry value > 5 }		
 		}	
 		modifier = {
 			add = 1
-			num_districts = { type = district_arcology_arms_industry value > 6 }		
+			num_districts = { type = district_hab_foundry value > 6 }		
 		}	
 		modifier = {
 			add = 1
-			num_districts = { type = district_arcology_arms_industry value > 7 }		
+			num_districts = { type = district_hab_foundry value > 7 }		
 		}	
 		modifier = {
 			add = 1
-			num_districts = { type = district_arcology_arms_industry value > 8 }		
-		}		
+			num_districts = { type = district_hab_foundry value > 8 }		
+		}	
+	}
 }
 
 # Research Habitat
-col_habitat = {
+col_habitat_research = {
 	icon = 12
 
 	potential = {
 		is_planet_class = pc_habitat
+	}
+	
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_planet_flag = research_habitat	
+		}
+		modifier = {
+			add = 2
+			num_buildings = { type = building_research_lab_1 value > 0 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_research_lab_1 value > 1 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_research_lab_1 value > 2 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_research_lab_1 value > 3 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_research_lab_1 value > 4 }		
+		}
+		modifier = {
+			add = 2
+			num_buildings = { type = building_research_lab_1 value > 5 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_research_lab_1 value > 6 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_research_lab_1 value > 7 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_research_lab_1 value > 8 }		
+		}	
+		modifier = {
+			add = 2
+			num_buildings = { type = building_research_lab_1 value > 9 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_research_lab_2 value > 0 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_research_lab_2 value > 1 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_research_lab_2 value > 2 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_research_lab_2 value > 3 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_research_lab_2 value > 4 }		
+		}
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_research_lab_2 value > 5 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_research_lab_2 value > 6 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_research_lab_2 value > 7 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_research_lab_2 value > 8 }		
+		}	
+		modifier = {
+			add = 2.25
+			num_buildings = { type = building_research_lab_2 value > 9 }		
+		}
+		modifier = {
+			add = 2.5
+			num_buildings = { type = building_research_lab_3 value > 0 }		
+		}	
+		modifier = {
+			add = 2.5
+			num_buildings = { type = building_research_lab_3 value > 1 }		
+		}	
+		modifier = {
+			add = 2.5
+			num_buildings = { type = building_research_lab_3 value > 2 }		
+		}	
+		modifier = {
+			add = 2.5
+			num_buildings = { type = building_research_lab_3 value > 3 }		
+		}	
+		modifier = {
+			add = 2.5
+			num_buildings = { type = building_research_lab_3 value > 4 }		
+		}
+		modifier = {
+			add = 2.5
+			num_buildings = { type = building_research_lab_3 value > 5 }		
+		}	
+		modifier = {
+			add = 2.5
+			num_buildings = { type = building_research_lab_3 value > 6 }		
+		}	
+		modifier = {
+			add = 2.5
+			num_buildings = { type = building_research_lab_3 value > 7 }		
+		}	
+		modifier = {
+			add = 2.5
+			num_buildings = { type = building_research_lab_3 value > 8 }		
+		}	
+		modifier = {
+			add = 2.5
+			num_buildings = { type = building_research_lab_3 value > 9 }		
+		}
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_science value > 0 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_science value > 1 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_science value > 2 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_science value > 3 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_science value > 4 }		
+		}
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_science value > 5 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_science value > 6 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_science value > 7 }		
+		}	
+		modifier = {
+			add = 1
+			num_districts = { type = district_hab_science value > 8 }		
+		}
+	}	
+}
+
+# Void Habitat
+# Origins Civics
+col_habitat_void = {
+	icon = 12
+
+	potential = {
+		is_planet_class = pc_habitat
+		has_planet_flag = void_habitat
 	}
 
 	weight_modifier = {
@@ -256,13 +493,12 @@ col_habitat = {
 	}
 }
 
-# Void Habitat
+# Habitat
 col_habitat = {
 	icon = 12
 
 	potential = {
 		is_planet_class = pc_habitat
-		has_planet_flag = void_habitat
 	}
 
 	weight_modifier = {
