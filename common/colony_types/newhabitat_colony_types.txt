@@ -12,64 +12,15 @@ col_habitat = {
 	weight_modifier = {
 		modifier = {
 			add = 500
-			OR = { 
-				AND = { # has more then 2 habitat types
-					has_planet_flag = energy_habitat
-					OR = {
-						has_planet_flag = foundry_habitat
-						has_planet_flag = trade_habitat
-						has_planet_flag = cultural_habitat
-						has_planet_flag = research_habitat
-					}
-				}
-				AND = { # has more then 2 habitat types
-					has_planet_flag = foundry_habitat
-					OR = {
-						has_planet_flag = energy_habitat
-						has_planet_flag = trade_habitat
-						has_planet_flag = cultural_habitat
-						has_planet_flag = research_habitat
-					}
-				}
-				AND = { # has more then 2 habitat types
-					has_planet_flag = trade_habitat
-					OR = {
-						has_planet_flag = energy_habitat
-						has_planet_flag = foundry_habitat
-						has_planet_flag = cultural_habitat
-						has_planet_flag = research_habitat
-					}
-				}
-				AND = { # has more then 2 habitat types
-					has_planet_flag = cultural_habitat
-					OR = {
-						has_planet_flag = energy_habitat
-						has_planet_flag = foundry_habitat
-						has_planet_flag = trade_habitat
-						has_planet_flag = research_habitat
-					}
-				}
-				AND = { # has more then 2 habitat types
-					has_planet_flag = research_habitat
-					OR = {
-						has_planet_flag = energy_habitat
-						has_planet_flag = foundry_habitat
-						has_planet_flag = trade_habitat
-						has_planet_flag = cultural_habitat
-					}
-				}
-				AND = { 
-					NOT = { # No planet specialization at all
-						has_planet_flag = energy_habitat
-						has_planet_flag = foundry_habitat
-						has_planet_flag = trade_habitat
-						has_planet_flag = cultural_habitat
-						has_planet_flag = research_habitat
-						has_planet_flag = void_habitat
-					}
-					num_districts = { type = district_hab_housing value = 0 }
-				}
+			NOR = { # No planet specialization at all
+				has_planet_flag = energy_habitat
+				has_planet_flag = foundry_habitat
+				has_planet_flag = trade_habitat
+				has_planet_flag = cultural_habitat
+				has_planet_flag = research_habitat
+				has_planet_flag = void_habitat
 			}
+			num_districts = { type = district_hab_housing value < 3 }
 		}
 	}
 }
@@ -771,7 +722,7 @@ col_habitat_leisure = {
 	}
 }
 
-# Habitat
+# Residential Habitat
 # Increases Pop Growth Speed by 20%, Increases Planet Amenities by 5
 col_habitat_residential = {
 	icon = 12
@@ -788,7 +739,7 @@ col_habitat_residential = {
 	weight_modifier = {
 		modifier = {
 			add = 500
-			NOT = { # No planet specialization
+			NOR = { # No planet specialization
 				has_planet_flag = energy_habitat
 				has_planet_flag = foundry_habitat
 				has_planet_flag = trade_habitat
@@ -796,7 +747,7 @@ col_habitat_residential = {
 				has_planet_flag = research_habitat
 				has_planet_flag = void_habitat
 			}	
-			num_districts = { type = district_hab_housing value > 0 }
+			num_districts = { type = district_hab_housing value >= 3 }
 		}
 	}
 }
