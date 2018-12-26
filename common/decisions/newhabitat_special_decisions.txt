@@ -276,6 +276,17 @@ decision_energy_district_habitat = {
 	allow = {
 		planet_size >= 2
 		free_district_slots > 0
+		solar_system = {
+			custom_tooltip = {
+				fail_text = "requires_no_black_hole_or_dyson_sphere"
+				NOR = {
+					is_star_class = sc_black_hole
+					has_megastructure = dyson_sphere_3
+					has_megastructure = dyson_sphere_4
+					has_megastructure = dyson_sphere_5
+				}
+			}				
+		}
 	}
 	
 	effect = {
