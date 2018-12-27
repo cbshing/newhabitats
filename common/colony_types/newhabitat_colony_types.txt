@@ -11,13 +11,8 @@ col_habitat = {
 	
 	weight_modifier = {
 		modifier = {
-			add = 500
-			NOR = { # No planet specialization at all
-				has_planet_flag = energy_habitat
-				has_planet_flag = foundry_habitat
-				has_planet_flag = trade_habitat
-				has_planet_flag = cultural_habitat
-				has_planet_flag = research_habitat
+			add = 50
+			NOR = { # Not void habitat
 				has_planet_flag = void_habitat
 			}
 			num_districts = { type = district_hab_housing value < 4 }
@@ -28,7 +23,7 @@ col_habitat = {
 # Generator Habitat
 # Increases Technician Production by 5%
 col_habitat_generator = {
-	icon = 12
+	icon = 4
 
 	potential = {
 		is_planet_class = pc_habitat
@@ -44,40 +39,32 @@ col_habitat_generator = {
 			has_planet_flag = energy_habitat	
 		}
 		modifier = {
-			add = 1
-			num_districts = { type = district_generator value > 0 }		
+			add = 2
+			num_districts = { type = district_hab_energy value > 2 }		
 		}	
 		modifier = {
-			add = 1
-			num_districts = { type = district_generator value > 1 }		
-		}	
-		modifier = {
-			add = 1
-			num_districts = { type = district_generator value > 2 }		
+			add = 20
+			num_districts = { type = district_hab_energy value > 3 }		
 		}	
 		modifier = {
 			add = 2
-			num_districts = { type = district_generator value > 3 }		
-		}	
-		modifier = {
-			add = 2
-			num_districts = { type = district_generator value > 4 }		
-		}
-		modifier = {
-			add = 2
-			num_districts = { type = district_generator value > 5 }		
-		}	
-		modifier = {
-			add = 2
-			num_districts = { type = district_generator value > 6 }		
+			num_districts = { type = district_hab_energy value > 4 }		
 		}
 		modifier = {
 			add = 3
-			num_districts = { type = district_generator value > 7 }		
-		}
+			num_districts = { type = district_hab_energy value > 5 }		
+		}	
 		modifier = {
 			add = 3
-			num_districts = { type = district_generator value > 8 }		
+			num_districts = { type = district_hab_energy value > 6 }		
+		}
+		modifier = {
+			add = 50
+			num_districts = { type = district_hab_energy value > 7 }		
+		}
+		modifier = {
+			add = 50
+			num_districts = { type = district_hab_energy value > 8 }		
 		}
 		modifier = {
 			add = 1
@@ -93,7 +80,7 @@ col_habitat_generator = {
 # Foundry Habitat
 # Increases Metallurgist Production by 5%
 col_habitat_foundry = {
-	icon = 12
+	icon = 5
 
 	potential = {
 		is_planet_class = pc_habitat
@@ -115,7 +102,7 @@ col_habitat_foundry = {
 		modifier = {
 			add = 2
 			num_buildings = { type = building_foundry_1 value > 1 }		
-		}	
+		}
 		modifier = {
 			add = 2
 			num_buildings = { type = building_foundry_1 value > 2 }		
@@ -227,41 +214,33 @@ col_habitat_foundry = {
 		modifier = {
 			add = 2.5
 			num_buildings = { type = building_foundry_3 value > 9 }		
-		}	
+		}		
 		modifier = {
-			add = 1
-			num_districts = { type = district_hab_foundry value > 0 }		
-		}	
-		modifier = {
-			add = 1
-			num_districts = { type = district_hab_foundry value > 1 }		
-		}	
-		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_hab_foundry value > 2 }		
 		}	
 		modifier = {
-			add = 1
+			add = 20
 			num_districts = { type = district_hab_foundry value > 3 }		
 		}	
 		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_hab_foundry value > 4 }		
 		}
 		modifier = {
-			add = 1
+			add = 3
 			num_districts = { type = district_hab_foundry value > 5 }		
 		}	
 		modifier = {
-			add = 1
+			add = 3
 			num_districts = { type = district_hab_foundry value > 6 }		
 		}	
 		modifier = {
-			add = 1
+			add = 4
 			num_districts = { type = district_hab_foundry value > 7 }		
 		}	
 		modifier = {
-			add = 1
+			add = 4
 			num_districts = { type = district_hab_foundry value > 8 }		
 		}	
 	}
@@ -270,7 +249,7 @@ col_habitat_foundry = {
 # Research Habitat
 # Increases Research by 5%
 col_habitat_research = {
-	icon = 12
+	icon = 8
 
 	potential = {
 		is_planet_class = pc_habitat
@@ -406,39 +385,31 @@ col_habitat_research = {
 			num_buildings = { type = building_research_lab_3 value > 9 }		
 		}
 		modifier = {
-			add = 1
-			num_districts = { type = district_hab_science value > 0 }		
-		}	
-		modifier = {
-			add = 1
-			num_districts = { type = district_hab_science value > 1 }		
-		}	
-		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_hab_science value > 2 }		
 		}	
 		modifier = {
-			add = 1
+			add = 20
 			num_districts = { type = district_hab_science value > 3 }		
 		}	
 		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_hab_science value > 4 }		
 		}
 		modifier = {
-			add = 1
+			add = 3
 			num_districts = { type = district_hab_science value > 5 }		
 		}	
 		modifier = {
-			add = 1
+			add = 3
 			num_districts = { type = district_hab_science value > 6 }		
 		}	
 		modifier = {
-			add = 1
+			add = 50
 			num_districts = { type = district_hab_science value > 7 }		
 		}	
 		modifier = {
-			add = 1
+			add = 50
 			num_districts = { type = district_hab_science value > 8 }		
 		}
 	}	
@@ -547,39 +518,31 @@ col_habitat_trade = {
 			num_buildings = { type = building_galactic_stock_exchange value > 0 }		
 		}		
 		modifier = {
-			add = 1
-			num_districts = { type = district_hab_commercial value > 0 }		
-		}	
-		modifier = {
-			add = 1
-			num_districts = { type = district_hab_commercial value > 1 }		
-		}	
-		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_hab_commercial value > 2 }		
 		}	
 		modifier = {
-			add = 1
+			add = 20
 			num_districts = { type = district_hab_commercial value > 3 }		
 		}	
 		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_hab_commercial value > 4 }		
 		}
 		modifier = {
-			add = 1
+			add = 3
 			num_districts = { type = district_hab_commercial value > 5 }		
 		}	
 		modifier = {
-			add = 1
+			add = 3
 			num_districts = { type = district_hab_commercial value > 6 }		
 		}	
 		modifier = {
-			add = 1
+			add = 50
 			num_districts = { type = district_hab_commercial value > 7 }		
 		}	
 		modifier = {
-			add = 1
+			add = 50
 			num_districts = { type = district_hab_commercial value > 8 }		
 		}
 	}
@@ -685,46 +648,38 @@ col_habitat_leisure = {
 			num_buildings = { type = building_hyper_entertainment_forum value > 9 }		
 		}	
 		modifier = {
-			add = 1
-			num_districts = { type = district_hab_cultural value > 0 }		
-		}	
-		modifier = {
-			add = 1
-			num_districts = { type = district_hab_cultural value > 1 }		
-		}	
-		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_hab_cultural value > 2 }		
 		}	
 		modifier = {
-			add = 1
+			add = 20
 			num_districts = { type = district_hab_cultural value > 3 }		
 		}	
 		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_hab_cultural value > 4 }		
 		}
 		modifier = {
-			add = 1
+			add = 3
 			num_districts = { type = district_hab_cultural value > 5 }		
 		}	
 		modifier = {
-			add = 1
+			add = 3
 			num_districts = { type = district_hab_cultural value > 6 }		
 		}	
 		modifier = {
-			add = 1
+			add = 50
 			num_districts = { type = district_hab_cultural value > 7 }		
 		}	
 		modifier = {
-			add = 1
+			add = 50
 			num_districts = { type = district_hab_cultural value > 8 }		
 		}
 	}
 }
 
 # Residential Habitat
-# Increases Pop Growth Speed by 20%, Increases Planet Amenities by 5
+# Increases Pop Growth Speed by 10%, Increases Planet Amenities by 5
 col_habitat_residential = {
 	icon = 12
 
@@ -735,13 +690,13 @@ col_habitat_residential = {
 	}
 	
 	planet_modifier = {
-		pop_growth_speed = 0.2
+		pop_growth_speed = 0.1
 		planet_amenities_add = 5
 	}
 
 	weight_modifier = {
 		modifier = {
-			add = 20
+			add = 100
 			NOR = { # No planet specialization
 				has_planet_flag = energy_habitat
 				has_planet_flag = foundry_habitat
@@ -757,7 +712,7 @@ col_habitat_residential = {
 
 # Void Habitat
 # Origins Civics
-# Increases Pop Growth Speed by 50%
+# Increases Pop Growth Speed by 25%
 col_habitat_void = {
 	icon = 12
 
@@ -766,7 +721,7 @@ col_habitat_void = {
 	}
 	
 	planet_modifier = {
-		pop_growth_speed = 0.5
+		pop_growth_speed = 0.25
 	}
 
 	weight_modifier = {
