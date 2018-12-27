@@ -1,7 +1,7 @@
 @hab_cost = 500
 @hab_maintenance = 2
 
-# housing adds 12 housing + 4 clerk jobs; or 2 maint. drone jobs
+# housing adds 10 housing + 4 clerk jobs; or 2 maint. drone jobs
 district_hab_housing = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
@@ -138,9 +138,46 @@ district_hab_energy = {
 	
 	planet_modifier = {
 		planet_housing_add = 2
-		planet_jobs_energy_produces_mult = 0.10
 	}
-		
+	
+	#scales to 25%
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			num_districts = { type = district_hab_energy value = 1 }
+		}		
+		planet_jobs_energy_produces_mult = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			num_districts = { type = district_hab_energy value = 2 }
+		}		
+		planet_jobs_energy_produces_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			num_districts = { type = district_hab_energy value = 3 }
+		}		
+		planet_jobs_energy_produces_mult = 0.15
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			num_districts = { type = district_hab_energy value = 4 }
+		}		
+		planet_jobs_energy_produces_mult = 0.20
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			num_districts = { type = district_hab_energy value > 4 }
+		}		
+		planet_jobs_energy_produces_mult = 0.25
+	}
+	
+	#jobs
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -259,7 +296,7 @@ district_hab_energy = {
 	}
 }
 
-# cultural adds 3 housing + 4 entertainer jobs and 2 cultural worker jobs
+# cultural adds 4 housing + 4 entertainer jobs and 2 cultural worker jobs
 district_hab_cultural = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
@@ -306,9 +343,8 @@ district_hab_cultural = {
 	}
 		
 	planet_modifier = {
-		planet_housing_add = 3
+		planet_housing_add = 4
 		job_entertainer_add = 4
-		
 	}
 	
 	triggered_planet_modifier = {
@@ -397,7 +433,7 @@ district_hab_cultural = {
 	}
 }
 
-# research adds 3 housing + 6 researcher jobs
+# research adds 2 housing + 5 researcher jobs
 district_hab_science = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
@@ -442,7 +478,7 @@ district_hab_science = {
 	}
 	
 	planet_modifier = {
-		planet_housing_add = 3
+		planet_housing_add = 2
 	}
 	
 	triggered_planet_modifier = {
@@ -451,7 +487,7 @@ district_hab_science = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = 6
+			job_researcher_add = 5
 		}
 	}
 	
@@ -461,7 +497,7 @@ district_hab_science = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = 6
+			job_brain_drone_add = 5
 		}
 	}
 	
@@ -471,7 +507,7 @@ district_hab_science = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {	
-			job_calculator_add = 6
+			job_calculator_add = 5
 		}
 	}
 	
@@ -511,7 +547,7 @@ district_hab_science = {
 	#}
 }
 
-# commercial adds 4 housing + 8 clerk jobs
+# commercial adds 2 housing + 8 clerk jobs
 district_hab_commercial = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
@@ -558,7 +594,7 @@ district_hab_commercial = {
 	}
 		
 	planet_modifier = {
-		planet_housing_add = 4
+		planet_housing_add = 2
 		job_clerk_add = 8
 	}
 	
@@ -584,7 +620,7 @@ district_hab_commercial = {
 	}
 }
 
-# foundry adds 3 housing + 6 foundry jobs
+# foundry adds 2 housing + 5 foundry jobs
 district_hab_foundry = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
@@ -629,7 +665,7 @@ district_hab_foundry = {
 	}
 	
 	planet_modifier = {
-		planet_housing_add = 3
+		planet_housing_add = 2
 	}
 	
 	triggered_planet_modifier = {
@@ -638,7 +674,7 @@ district_hab_foundry = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_alloy_drone_add = 6
+			job_alloy_drone_add = 5
 		}
 	}
 	
@@ -658,7 +694,7 @@ district_hab_foundry = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_foundry_add = 6
+			job_foundry_add = 5
 		}
 	}
 	
