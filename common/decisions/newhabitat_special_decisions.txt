@@ -13,8 +13,7 @@ decision_trade_district_habitat = {
 	resources = {
 		category = decisions
 		cost = {
-			minerals = 450
-			influence = 50
+			minerals = 500
 		}
 	}
 	
@@ -30,7 +29,35 @@ decision_trade_district_habitat = {
 	
 	allow = {
 		planet_size >= 2
-		free_district_slots > 0
+		custom_tooltip = {
+			fail_text = decision_no_free_districts
+			free_district_slots > 0
+		}
+		custom_tooltip = {
+			fail_text = decision_district_habitat_too_many_districts
+			OR = {
+				AND = {
+					has_planet_flag = cultural_habitat
+					has_planet_flag = research_habitat
+					has_planet_flag = generator_habitat
+				}
+				AND = {
+					has_planet_flag = cultural_habitat
+					has_planet_flag = research_habitat
+					has_planet_flag = foundry_habitat
+				}
+				AND = {
+					has_planet_flag = cultural_habitat
+					has_planet_flag = generator_habitat
+					has_planet_flag = foundry_habitat
+				}
+				AND = {
+					has_planet_flag = research_habitat
+					has_planet_flag = generator_habitat
+					has_planet_flag = foundry_habitat
+				}
+			}
+		}
 	}
 	
 	effect = {
@@ -46,9 +73,19 @@ decision_trade_district_habitat = {
 			free_amenities < 2
 		}
 		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = energy
+					value < 10
+				}
+			}
+		}
+		modifier = {
 			factor = 0
 			OR = {
-				has_planet_flag = cultural_habitat
+				has_planet_flag = generator_habitat
+				has_planet_flag = foundry_habitat
 				has_planet_flag = research_habitat
 			}
 		}
@@ -98,8 +135,7 @@ decision_cultural_district_habitat = {
 	resources = {
 		category = decisions
 		cost = {
-			minerals = 450
-			influence = 50
+			minerals = 500
 		}
 	}
 	
@@ -115,7 +151,35 @@ decision_cultural_district_habitat = {
 	
 	allow = {
 		planet_size >= 2
-		free_district_slots > 0
+		custom_tooltip = {
+			fail_text = decision_no_free_districts
+			free_district_slots > 0
+		}
+		custom_tooltip = {
+			fail_text = decision_district_habitat_too_many_districts
+			OR = {
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = research_habitat
+					has_planet_flag = generator_habitat
+				}
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = research_habitat
+					has_planet_flag = foundry_habitat
+				}
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = generator_habitat
+					has_planet_flag = foundry_habitat
+				}
+				AND = {
+					has_planet_flag = research_habitat
+					has_planet_flag = generator_habitat
+					has_planet_flag = foundry_habitat
+				}
+			}
+		}
 	}
 	
 	effect = {
@@ -184,8 +248,7 @@ decision_research_district_habitat = {
 	resources = {
 		category = decisions
 		cost = {
-			minerals = 450
-			influence = 50
+			minerals = 500
 		}
 	}
 	
@@ -198,7 +261,35 @@ decision_research_district_habitat = {
 	
 	allow = {
 		planet_size >= 2
-		free_district_slots > 0
+		custom_tooltip = {
+			fail_text = decision_no_free_districts
+			free_district_slots > 0
+		}
+		custom_tooltip = {
+			fail_text = decision_district_habitat_too_many_districts
+			OR = {
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = cultural_habitat
+					has_planet_flag = generator_habitat
+				}
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = cultural_habitat
+					has_planet_flag = foundry_habitat
+				}
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = generator_habitat
+					has_planet_flag = foundry_habitat
+				}
+				AND = {
+					has_planet_flag = cultural_habitat
+					has_planet_flag = generator_habitat
+					has_planet_flag = foundry_habitat
+				}
+			}
+		}
 	}
 	
 	effect = {
@@ -211,7 +302,7 @@ decision_research_district_habitat = {
 		modifier = {
 			factor = 0
 			OR = {
-				has_planet_flag = generator_habitat
+				has_planet_flag = trade_habitat
 				has_planet_flag = foundry_habitat
 			}
 		}
@@ -261,8 +352,7 @@ decision_energy_district_habitat = {
 	resources = {
 		category = decisions
 		cost = {
-			minerals = 450
-			influence = 50
+			minerals = 500
 		}
 	}
 	
@@ -275,7 +365,35 @@ decision_energy_district_habitat = {
 	
 	allow = {
 		planet_size >= 2
-		free_district_slots > 0
+		custom_tooltip = {
+			fail_text = decision_no_free_districts
+			free_district_slots > 0
+		}
+		custom_tooltip = {
+			fail_text = decision_district_habitat_too_many_districts
+			OR = {
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = cultural_habitat
+					has_planet_flag = research_habitat
+				}
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = cultural_habitat
+					has_planet_flag = foundry_habitat
+				}
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = research_habitat
+					has_planet_flag = foundry_habitat
+				}
+				AND = {
+					has_planet_flag = cultural_habitat
+					has_planet_flag = research_habitat
+					has_planet_flag = foundry_habitat
+				}
+			}
+		}
 		solar_system = {
 			custom_tooltip = {
 				fail_text = "requires_no_black_hole_or_dyson_sphere"
@@ -340,7 +458,6 @@ decision_energy_district_habitat = {
 			OR = {
 				has_planet_flag = trade_habitat
 				has_planet_flag = cultural_habitat
-				has_planet_flag = research_habitat
 			}
 		}
 	}
@@ -389,8 +506,7 @@ decision_foundry_district_habitat = {
 	resources = {
 		category = decisions
 		cost = {
-			minerals = 450
-			influence = 50
+			minerals = 500
 		}
 	}
 	
@@ -403,7 +519,35 @@ decision_foundry_district_habitat = {
 	
 	allow = {
 		planet_size >= 2
-		free_district_slots > 0
+		custom_tooltip = {
+			fail_text = decision_no_free_districts
+			free_district_slots > 0
+		}
+		custom_tooltip = {
+			fail_text = decision_district_habitat_too_many_districts
+			OR = {
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = cultural_habitat
+					has_planet_flag = research_habitat
+				}
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = cultural_habitat
+					has_planet_flag = energy_habitat
+				}
+				AND = {
+					has_planet_flag = trade_habitat
+					has_planet_flag = research_habitat
+					has_planet_flag = energy_habitat
+				}
+				AND = {
+					has_planet_flag = cultural_habitat
+					has_planet_flag = research_habitat
+					has_planet_flag = energy_habitat
+				}
+			}
+		}
 	}
 	
 	effect = {
