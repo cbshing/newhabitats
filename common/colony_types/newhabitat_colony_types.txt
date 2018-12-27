@@ -40,7 +40,7 @@ col_habitat_generator = {
 
 	weight_modifier = {
 		modifier = {
-			add = 2
+			add = 20
 			has_planet_flag = energy_habitat	
 		}
 		modifier = {
@@ -105,7 +105,7 @@ col_habitat_foundry = {
 
 	weight_modifier = {
 		modifier = {
-			add = 2
+			add = 20
 			has_planet_flag = foundry_habitat	
 		}
 		modifier = {
@@ -282,7 +282,7 @@ col_habitat_research = {
 
 	weight_modifier = {
 		modifier = {
-			add = 2
+			add = 20
 			has_planet_flag = research_habitat	
 		}
 		modifier = {
@@ -459,7 +459,7 @@ col_habitat_trade = {
 
 	weight_modifier = {
 		modifier = {
-			add = 2
+			add = 20
 			has_planet_flag = trade_habitat	
 		}
 		modifier = {
@@ -601,7 +601,7 @@ col_habitat_leisure = {
 
 	weight_modifier = {
 		modifier = {
-			add = 2
+			add = 20
 			has_planet_flag = cultural_habitat	
 		}
 		modifier = {
@@ -741,7 +741,7 @@ col_habitat_residential = {
 
 	weight_modifier = {
 		modifier = {
-			add = 10
+			add = 20
 			NOR = { # No planet specialization
 				has_planet_flag = energy_habitat
 				has_planet_flag = foundry_habitat

@@ -308,14 +308,74 @@ district_hab_cultural = {
 	planet_modifier = {
 		planet_housing_add = 3
 		job_entertainer_add = 4
-		job_culture_worker_add = 2
+		
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_spiritualist = no
+				is_megacorp = no 
+			}
+		}
+		modifier = {
+			job_culture_worker_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_spiritualist = yes	}
+		}
+		modifier = {
+			job_priest_add = 2
+			pop_ethic_spiritualist_attraction_mult = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_megacorp = yes }
+		}
+		modifier = {
+			job_manager_add = 2
+		}
+	}
+	
 	
 	triggered_desc = {
 		text = job_entertainer_effect_desc
 	}	
 	
 	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_spiritualist = yes }
+		}
+		text = job_priest_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_megacorp = yes }
+		}
+		text = job_manager_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_spiritualist = no
+				is_megacorp = no 
+			}
+		}
 		text = job_culture_worker_effect_desc
 	}	
 	
