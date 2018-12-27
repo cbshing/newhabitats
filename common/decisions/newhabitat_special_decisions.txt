@@ -7,7 +7,7 @@ decision_trade_district_habitat = {
 	owned_planets_only = yes
 	
 	prerequisites = {
-		""		
+		"tech_planetary_government"		
 	}
 
 	resources = {
@@ -28,14 +28,13 @@ decision_trade_district_habitat = {
 	}
 	
 	allow = {
-		planet_size >= 2
 		custom_tooltip = {
 			fail_text = decision_no_free_districts
 			free_district_slots > 0
 		}
 		custom_tooltip = {
 			fail_text = decision_district_habitat_too_many_districts
-			OR = {
+			NOR = {
 				AND = {
 					has_planet_flag = cultural_habitat
 					has_planet_flag = research_habitat
@@ -65,30 +64,8 @@ decision_trade_district_habitat = {
 		hidden_effect = { set_planet_flag = trade_habitat }
 	}
 	
-	ai_weight = {
-		weight = 1
-
-		modifier = {
-			factor = 5
-			free_amenities < 2
-		}
-		modifier = {
-			factor = 5
-			owner = { 
-				has_monthly_income = {
-					resource = energy
-					value < 10
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				has_planet_flag = generator_habitat
-				has_planet_flag = foundry_habitat
-				has_planet_flag = research_habitat
-			}
-		}
+	ai_weight = { # in testing, never saw AI use; just force AI to certain habitat setups
+		weight = 0
 	}
 }
 
@@ -116,7 +93,7 @@ decision_remove_trade_district_habitat = {
 	}
 	
 	effect = {
-		hidden_effect = { remove_planet_flag = trade_habitat }
+		hidden_effect = { remove_planet_flag = trade_habitat remove_district = district_hab_commercial }
 	}
 	
 	ai_weight = {
@@ -129,7 +106,7 @@ decision_cultural_district_habitat = {
 	owned_planets_only = yes
 	
 	prerequisites = {
-		""		
+		"tech_planetary_government"		
 	}
 
 	resources = {
@@ -150,14 +127,13 @@ decision_cultural_district_habitat = {
 	}
 	
 	allow = {
-		planet_size >= 2
 		custom_tooltip = {
 			fail_text = decision_no_free_districts
 			free_district_slots > 0
 		}
 		custom_tooltip = {
 			fail_text = decision_district_habitat_too_many_districts
-			OR = {
+			NOR = {
 				AND = {
 					has_planet_flag = trade_habitat
 					has_planet_flag = research_habitat
@@ -187,21 +163,8 @@ decision_cultural_district_habitat = {
 		hidden_effect = { set_planet_flag = cultural_habitat }
 	}
 	
-	ai_weight = {
-		weight = 1
-
-		modifier = {
-			factor = 3
-			free_amenities < 2
-		}
-		
-		modifier = {
-			factor = 0
-			OR = {
-				has_planet_flag = generator_habitat
-				has_planet_flag = foundry_habitat
-			}
-		}
+	ai_weight = { # in testing, never saw AI use; just force AI to certain habitat setups
+		weight = 0
 	}
 }
 
@@ -229,7 +192,7 @@ decision_remove_cultural_district_habitat = {
 	}
 	
 	effect = {
-		hidden_effect = { remove_planet_flag = cultural_habitat }
+		hidden_effect = { remove_planet_flag = cultural_habitat remove_district = district_hab_cultural }
 	}
 	
 	ai_weight = {
@@ -242,7 +205,7 @@ decision_research_district_habitat = {
 	owned_planets_only = yes
 	
 	prerequisites = {
-		""		
+		"tech_planetary_government"		
 	}
 
 	resources = {
@@ -260,14 +223,13 @@ decision_research_district_habitat = {
 	}
 	
 	allow = {
-		planet_size >= 2
 		custom_tooltip = {
 			fail_text = decision_no_free_districts
 			free_district_slots > 0
 		}
 		custom_tooltip = {
 			fail_text = decision_district_habitat_too_many_districts
-			OR = {
+			NOR = {
 				AND = {
 					has_planet_flag = trade_habitat
 					has_planet_flag = cultural_habitat
@@ -297,15 +259,8 @@ decision_research_district_habitat = {
 		hidden_effect = { set_planet_flag = research_habitat }
 	}
 	
-	ai_weight = {
-		weight = 1
-		modifier = {
-			factor = 0
-			OR = {
-				has_planet_flag = trade_habitat
-				has_planet_flag = foundry_habitat
-			}
-		}
+	ai_weight = { # in testing, never saw AI use; just force AI to certain habitat setups
+		weight = 0
 	}
 }
 
@@ -333,7 +288,7 @@ decision_remove_research_district_habitat = {
 	}
 	
 	effect = {
-		hidden_effect = { remove_planet_flag = research_habitat }
+		hidden_effect = { remove_planet_flag = research_habitat remove_district = district_hab_science }
 	}
 	
 	ai_weight = {
@@ -346,7 +301,7 @@ decision_energy_district_habitat = {
 	owned_planets_only = yes
 	
 	prerequisites = {
-		""		
+		"tech_planetary_government"		
 	}
 
 	resources = {
@@ -359,19 +314,18 @@ decision_energy_district_habitat = {
 	potential = {
 		is_planet_class = pc_habitat
 		NOT = { 
-			has_planet_flag = generator_habitat
+			has_planet_flag = energy_habitat
 		}
 	}
 	
 	allow = {
-		planet_size >= 2
 		custom_tooltip = {
 			fail_text = decision_no_free_districts
 			free_district_slots > 0
 		}
 		custom_tooltip = {
 			fail_text = decision_district_habitat_too_many_districts
-			OR = {
+			NOR = {
 				AND = {
 					has_planet_flag = trade_habitat
 					has_planet_flag = cultural_habitat
@@ -394,9 +348,9 @@ decision_energy_district_habitat = {
 				}
 			}
 		}
-		solar_system = {
-			custom_tooltip = {
-				fail_text = "requires_no_black_hole_or_dyson_sphere"
+		custom_tooltip = {
+			fail_text = "requires_no_black_hole_or_dyson_sphere"
+			solar_system = {
 				NOR = {
 					is_star_class = sc_black_hole
 					has_megastructure = dyson_sphere_3
@@ -409,57 +363,11 @@ decision_energy_district_habitat = {
 	
 	effect = {
 		add_district = district_hab_energy 	
-		hidden_effect = { set_planet_flag = generator_habitat }
+		hidden_effect = { set_planet_flag = energy_habitat }
 	}
 	
-	ai_weight = {
-		weight = 1
-		modifier = {
-			factor = 3
-			owner = { 
-				has_monthly_income = {
-					resource = energy
-					value < 8
-				}
-			}
-		}
-
-		modifier = {
-			factor = 2
-			free_housing < 0
-		}
-
-		modifier = {
-			factor = 3
-			any_owned_pop = { 
-				OR = { 
-					is_unemployed = yes 
-					has_job = servant 
-				}
-			}
-		}
-
-		# No one to work it anyway
-		modifier = {
-			factor = 0
-			free_housing > 0
-			NOT = {
-				any_owned_pop = { 
-					OR = { 
-						is_unemployed = yes 
-						has_job = servant 
-					}
-				}
-			}
-		}
-		
-		modifier = {
-			factor = 0
-			OR = {
-				has_planet_flag = trade_habitat
-				has_planet_flag = cultural_habitat
-			}
-		}
+	ai_weight = { # in testing, never saw AI use; just force AI to certain habitat setups
+		weight = 0
 	}
 }
 
@@ -476,7 +384,7 @@ decision_remove_energy_district_habitat = {
 	
 	potential = {
 		is_planet_class = pc_habitat
-		has_planet_flag = generator_habitat
+		has_planet_flag = energy_habitat
 	}
 	
 	allow = {
@@ -487,7 +395,7 @@ decision_remove_energy_district_habitat = {
 	}
 	
 	effect = {
-		hidden_effect = { remove_planet_flag = generator_habitat }
+		hidden_effect = { remove_planet_flag = energy_habitat remove_district = district_hab_energy }
 	}
 	
 	ai_weight = {
@@ -500,7 +408,7 @@ decision_foundry_district_habitat = {
 	owned_planets_only = yes
 	
 	prerequisites = {
-		""		
+		"tech_planetary_government"		
 	}
 
 	resources = {
@@ -518,14 +426,13 @@ decision_foundry_district_habitat = {
 	}
 	
 	allow = {
-		planet_size >= 2
 		custom_tooltip = {
 			fail_text = decision_no_free_districts
 			free_district_slots > 0
 		}
 		custom_tooltip = {
 			fail_text = decision_district_habitat_too_many_districts
-			OR = {
+			NOR = {
 				AND = {
 					has_planet_flag = trade_habitat
 					has_planet_flag = cultural_habitat
@@ -555,25 +462,8 @@ decision_foundry_district_habitat = {
 		hidden_effect = { set_planet_flag = foundry_habitat }
 	}
 	
-	ai_weight = {
-		weight = 1
-		modifier = 	{
-			factor = 4
-			owner = { 
-				has_monthly_income = {
-					resource = alloys
-					value < 12
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				has_planet_flag = trade_habitat
-				has_planet_flag = cultural_habitat
-				has_planet_flag = research_habitat
-			}
-		}
+	ai_weight = { # in testing, never saw AI use; just force AI to certain habitat setups
+		weight = 0
 	}
 }
 
@@ -601,7 +491,7 @@ decision_remove_foundry_district_habitat = {
 	}
 	
 	effect = {
-		hidden_effect = { remove_planet_flag = foundry_habitat }
+		hidden_effect = { remove_planet_flag = foundry_habitat remove_district = district_hab_foundry }
 	}
 	
 	ai_weight = {

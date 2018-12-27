@@ -4,10 +4,16 @@
  district_hab_foundry_plural:0 "Foundry Districts"
  district_hab_foundry_desc:1 "Direct access to micro-gravity and the hard vacuum of space allows for smelters and metallurgists to employ innovate manufacturing techniques on this Habitat."
  
+ has_decision_energy_habitat:0 "Has allowed construction of $district_hab_energy_plural$"
+ has_decision_cultural_habitat:0 "Has allowed construction of $district_hab_cultural_plural$"
+ has_decision_research_habitat:0 "Has allowed construction of $district_hab_science_plural$"
+ has_decision_trade_habitat:0 "Has allowed construction of $district_hab_commercial$"
+ has_decision_foundry_habitat:0 "Has allowed construction of $district_hab_foundry_plural$"
+ 
  decision_no_free_districts:0 "£trigger_no£ There are no free district slots."
  decision_district_habitat_too_many_districts:0 "£trigger_no£ This habitat has too many districts built on it."
  
- decision_trade_district_habitat:0 "Establish Trade District"
+ decision_trade_district_habitat:0 "Establish $district_hab_commercial$"
  decision_trade_district_habitat_desc:1 "This habitat will be considered a center of commerce, enabling the construction of $district_hab_commercial_plural$."
  decision_trade_district_habitat_effects_short:0 "Enables construction of £district£ §Y$district_hab_commercial_plural$§! on this habitat\n\nCreates §Y1§! new §Y$district_hab_commercial$§!"
  decision_remove_trade_district_habitat:0 "Remove Trade District"
@@ -15,7 +21,7 @@
  decision_remove_trade_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_commercial_plural$§! on this habitat"
  decision_remove_trade_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_commercial_plural$§! slots on the habitat must be dismanteled"
  
- decision_cultural_district_habitat:0 "Establish Leisure District"
+ decision_cultural_district_habitat:0 "Establish $district_hab_cultural$"
  decision_cultural_district_habitat_desc:1 "This habitat will be considered a center of entertainment, enabling the construction of $district_hab_cultural_plural$."
  decision_cultural_district_habitat_effects_short:0 "Enables construction of £district£ §Y$district_hab_cultural_plural$§! on this habitat\n\nCreates §Y1§! new §Y$district_hab_cultural$§!"
  decision_remove_cultural_district_habitat:0 "Remove Leisure District"
@@ -23,7 +29,7 @@
  decision_remove_cultural_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_cultural_plural$§! on this habitat"
  decision_remove_leisure_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_cultural_plural$§! slots on the habitat must be dismanteled"
  
- decision_research_district_habitat:0 "Establish Research District"
+ decision_research_district_habitat:0 "Establish $district_hab_science$"
  decision_research_district_habitat_desc:1 "This habitat will be considered a center of research, enabling the construction of $district_hab_science_plural$."
  decision_research_district_habitat_effects_short:0 "Enables construction of £district£ §Y$district_hab_science_plural$§! on this habitat\n\nCreates §Y1§! new §Y$district_hab_science$§!"
  decision_remove_research_district_habitat:0 "Remove Research District"
@@ -31,10 +37,10 @@
  decision_remove_research_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_science_plural$§! on this habitat"
  decision_remove_research_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_science_plural$§! slots on the habitat must be dismanteled"
  
- decision_energy_district_habitat:0 "Establish Generator District"
+ decision_energy_district_habitat:0 "Establish $district_hab_energy$"
  decision_energy_district_habitat_desc:1 "This habitat will focus on collecting solar energy, enabling the construction of $district_hab_energy_plural$."
  decision_energy_district_habitat_effects_short:0 "Enables construction of £district£ §Y$district_hab_energy_plural$§! on this habitat\n\nCreates §Y1§! new §Y$district_hab_energy$§!"
- decision_remove_energy_district_habitat:0 "Remove Generator District"
+ decision_remove_energy_district_habitat:0 "Remove Reactor District"
  decision_remove_energy_district_habitat_desc:1 "This habitat will no longer focus on collecting energy, freeing up space for new constructions."
  decision_remove_energy_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_energy_plural$§! on this habitat"
  decision_remove_energy_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_energy_plural$§! slots on the habitat must be dismanteled"

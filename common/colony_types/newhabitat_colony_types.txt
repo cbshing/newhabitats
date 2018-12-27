@@ -40,7 +40,7 @@ col_habitat_generator = {
 
 	weight_modifier = {
 		modifier = {
-			add = 20
+			add = 2
 			has_planet_flag = energy_habitat	
 		}
 		modifier = {
@@ -56,27 +56,27 @@ col_habitat_generator = {
 			num_districts = { type = district_generator value > 2 }		
 		}	
 		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_generator value > 3 }		
 		}	
 		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_generator value > 4 }		
 		}
 		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_generator value > 5 }		
 		}	
 		modifier = {
-			add = 1
+			add = 2
 			num_districts = { type = district_generator value > 6 }		
 		}
 		modifier = {
-			add = 1
+			add = 3
 			num_districts = { type = district_generator value > 7 }		
 		}
 		modifier = {
-			add = 1
+			add = 3
 			num_districts = { type = district_generator value > 8 }		
 		}
 		modifier = {
@@ -105,7 +105,7 @@ col_habitat_foundry = {
 
 	weight_modifier = {
 		modifier = {
-			add = 20
+			add = 2
 			has_planet_flag = foundry_habitat	
 		}
 		modifier = {
@@ -282,7 +282,7 @@ col_habitat_research = {
 
 	weight_modifier = {
 		modifier = {
-			add = 20
+			add = 2
 			has_planet_flag = research_habitat	
 		}
 		modifier = {
@@ -459,7 +459,7 @@ col_habitat_trade = {
 
 	weight_modifier = {
 		modifier = {
-			add = 20
+			add = 2
 			has_planet_flag = trade_habitat	
 		}
 		modifier = {
@@ -601,7 +601,7 @@ col_habitat_leisure = {
 
 	weight_modifier = {
 		modifier = {
-			add = 20
+			add = 2
 			has_planet_flag = cultural_habitat	
 		}
 		modifier = {
