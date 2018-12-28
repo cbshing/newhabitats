@@ -82,7 +82,7 @@ col_habitat_generator = {
 }
 
 # Foundry Habitat
-# Increases Metallurgist Production by 10%
+# Increases Metallurgist Production by 5%
 col_habitat_foundry = {
 	icon = 5
 
@@ -91,7 +91,7 @@ col_habitat_foundry = {
 	}
 	
 	planet_modifier = {
-		planet_metallurgists_produces_mult = 0.10
+		planet_metallurgists_produces_mult = 0.05
 	}
 
 	weight_modifier = {
@@ -135,7 +135,7 @@ col_habitat_foundry = {
 }
 
 # Research Habitat
-# Increases Research by 10%
+# Increases Research by 5%
 col_habitat_research = {
 	icon = 8
 
@@ -144,7 +144,7 @@ col_habitat_research = {
 	}
 	
 	planet_modifier = {
-		planet_researchers_produces_mult = 0.10
+		planet_researchers_produces_mult = 0.05
 	}
 
 	weight_modifier = {
@@ -196,7 +196,7 @@ col_habitat_research = {
 }
 
 # Trade Habitat
-# Creates 2 Merchant Jobs
+# Trade Value Multiplier 10%
 col_habitat_trade = {
 	icon = 12
 
@@ -205,7 +205,7 @@ col_habitat_trade = {
 	}
 	
 	planet_modifier = {
-		job_merchant_add = 2
+		trade_value_mult = 0.1
 	}
 
 	weight_modifier = {
