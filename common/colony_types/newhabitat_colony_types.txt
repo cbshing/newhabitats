@@ -15,7 +15,7 @@ col_habitat = {
 			NOR = { # Not void habitat
 				has_planet_flag = void_habitat
 			}
-			num_districts = { type = district_hab_housing value < 4 }
+			num_districts = { type = district_hab_housing value < 5 }
 		}
 	}
 }
@@ -39,7 +39,11 @@ col_habitat_generator = {
 			has_planet_flag = energy_habitat	
 		}
 		modifier = {
-			add = 2
+			add = 10
+			num_districts = { type = district_hab_energy value > 1 }		
+		}
+		modifier = {
+			add = 20
 			num_districts = { type = district_hab_energy value > 2 }		
 		}	
 		modifier = {
@@ -47,23 +51,23 @@ col_habitat_generator = {
 			num_districts = { type = district_hab_energy value > 3 }		
 		}	
 		modifier = {
-			add = 2
+			add = 20
 			num_districts = { type = district_hab_energy value > 4 }		
 		}
 		modifier = {
-			add = 3
+			add = 30
 			num_districts = { type = district_hab_energy value > 5 }		
 		}	
 		modifier = {
-			add = 3
+			add = 30
 			num_districts = { type = district_hab_energy value > 6 }		
 		}
 		modifier = {
-			add = 50
+			add = 40
 			num_districts = { type = district_hab_energy value > 7 }		
 		}
 		modifier = {
-			add = 50
+			add = 40
 			num_districts = { type = district_hab_energy value > 8 }		
 		}
 		modifier = {
@@ -78,7 +82,7 @@ col_habitat_generator = {
 }
 
 # Foundry Habitat
-# Increases Metallurgist Production by 5%
+# Increases Metallurgist Production by 10%
 col_habitat_foundry = {
 	icon = 5
 
@@ -87,7 +91,7 @@ col_habitat_foundry = {
 	}
 	
 	planet_modifier = {
-		planet_metallurgists_produces_mult = 0.05
+		planet_metallurgists_produces_mult = 0.10
 	}
 
 	weight_modifier = {
@@ -96,127 +100,11 @@ col_habitat_foundry = {
 			has_planet_flag = foundry_habitat	
 		}
 		modifier = {
-			add = 2
-			num_buildings = { type = building_foundry_1 value > 0 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_foundry_1 value > 1 }		
+			add = 10
+			num_districts = { type = district_hab_foundry value > 1 }		
 		}
 		modifier = {
-			add = 2
-			num_buildings = { type = building_foundry_1 value > 2 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_foundry_1 value > 3 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_foundry_1 value > 4 }		
-		}
-		modifier = {
-			add = 2
-			num_buildings = { type = building_foundry_1 value > 5 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_foundry_1 value > 6 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_foundry_1 value > 7 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_foundry_1 value > 8 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_foundry_1 value > 9 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_foundry_2 value > 0 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_foundry_2 value > 1 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_foundry_2 value > 2 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_foundry_2 value > 3 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_foundry_2 value > 4 }		
-		}
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_foundry_2 value > 5 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_foundry_2 value > 6 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_foundry_2 value > 7 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_foundry_2 value > 8 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_foundry_2 value > 9 }		
-		}
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_foundry_3 value > 0 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_foundry_3 value > 1 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_foundry_3 value > 2 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_foundry_3 value > 3 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_foundry_3 value > 4 }		
-		}
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_foundry_3 value > 5 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_foundry_3 value > 6 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_foundry_3 value > 7 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_foundry_3 value > 8 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_foundry_3 value > 9 }		
-		}		
-		modifier = {
-			add = 2
+			add = 20
 			num_districts = { type = district_hab_foundry value > 2 }		
 		}	
 		modifier = {
@@ -224,30 +112,30 @@ col_habitat_foundry = {
 			num_districts = { type = district_hab_foundry value > 3 }		
 		}	
 		modifier = {
-			add = 2
+			add = 20
 			num_districts = { type = district_hab_foundry value > 4 }		
 		}
 		modifier = {
-			add = 3
+			add = 30
 			num_districts = { type = district_hab_foundry value > 5 }		
 		}	
 		modifier = {
-			add = 3
+			add = 30
 			num_districts = { type = district_hab_foundry value > 6 }		
 		}	
 		modifier = {
-			add = 4
+			add = 40
 			num_districts = { type = district_hab_foundry value > 7 }		
 		}	
 		modifier = {
-			add = 4
+			add = 40
 			num_districts = { type = district_hab_foundry value > 8 }		
 		}	
 	}
 }
 
 # Research Habitat
-# Increases Research by 5%
+# Increases Research by 10%
 col_habitat_research = {
 	icon = 8
 
@@ -256,7 +144,7 @@ col_habitat_research = {
 	}
 	
 	planet_modifier = {
-		planet_researchers_produces_mult = 0.05
+		planet_researchers_produces_mult = 0.10
 	}
 
 	weight_modifier = {
@@ -265,127 +153,19 @@ col_habitat_research = {
 			has_planet_flag = research_habitat	
 		}
 		modifier = {
-			add = 2
-			num_buildings = { type = building_research_lab_1 value > 0 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_research_lab_1 value > 1 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_research_lab_1 value > 2 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_research_lab_1 value > 3 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_research_lab_1 value > 4 }		
+			add = 100
+			num_buildings = { type = building_institute value > 0 }		
 		}
 		modifier = {
-			add = 2
-			num_buildings = { type = building_research_lab_1 value > 5 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_research_lab_1 value > 6 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_research_lab_1 value > 7 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_research_lab_1 value > 8 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_research_lab_1 value > 9 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_research_lab_2 value > 0 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_research_lab_2 value > 1 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_research_lab_2 value > 2 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_research_lab_2 value > 3 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_research_lab_2 value > 4 }		
+			add = 100
+			num_buildings = { type = building_supercomputer value > 0 }		
 		}
 		modifier = {
-			add = 2.25
-			num_buildings = { type = building_research_lab_2 value > 5 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_research_lab_2 value > 6 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_research_lab_2 value > 7 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_research_lab_2 value > 8 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_research_lab_2 value > 9 }		
+			add = 10
+			num_districts = { type = district_hab_science value > 1 }		
 		}
 		modifier = {
-			add = 2.5
-			num_buildings = { type = building_research_lab_3 value > 0 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_research_lab_3 value > 1 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_research_lab_3 value > 2 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_research_lab_3 value > 3 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_research_lab_3 value > 4 }		
-		}
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_research_lab_3 value > 5 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_research_lab_3 value > 6 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_research_lab_3 value > 7 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_research_lab_3 value > 8 }		
-		}	
-		modifier = {
-			add = 2.5
-			num_buildings = { type = building_research_lab_3 value > 9 }		
-		}
-		modifier = {
-			add = 2
+			add = 20
 			num_districts = { type = district_hab_science value > 2 }		
 		}	
 		modifier = {
@@ -393,23 +173,23 @@ col_habitat_research = {
 			num_districts = { type = district_hab_science value > 3 }		
 		}	
 		modifier = {
-			add = 2
+			add = 20
 			num_districts = { type = district_hab_science value > 4 }		
 		}
 		modifier = {
-			add = 3
+			add = 30
 			num_districts = { type = district_hab_science value > 5 }		
 		}	
 		modifier = {
-			add = 3
+			add = 30
 			num_districts = { type = district_hab_science value > 6 }		
 		}	
 		modifier = {
-			add = 50
+			add = 40
 			num_districts = { type = district_hab_science value > 7 }		
 		}	
 		modifier = {
-			add = 50
+			add = 40
 			num_districts = { type = district_hab_science value > 8 }		
 		}
 	}	
@@ -432,93 +212,17 @@ col_habitat_trade = {
 		modifier = {
 			add = 20
 			has_planet_flag = trade_habitat	
-		}
-		modifier = {
-			add = 2
-			num_buildings = { type = building_commercial_zone value > 0 }		
 		}	
 		modifier = {
-			add = 2
-			num_buildings = { type = building_commercial_zone value > 1 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_commercial_zone value > 2 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_commercial_zone value > 3 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_commercial_zone value > 4 }		
-		}
-		modifier = {
-			add = 2
-			num_buildings = { type = building_commercial_zone value > 5 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_commercial_zone value > 6 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_commercial_zone value > 7 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_commercial_zone value > 8 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_commercial_zone value > 9 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_commercial_megaplex value > 0 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_commercial_megaplex value > 1 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_commercial_megaplex value > 2 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_commercial_megaplex value > 3 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_commercial_megaplex value > 4 }		
-		}
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_commercial_megaplex value > 5 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_commercial_megaplex value > 6 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_commercial_megaplex value > 7 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_commercial_megaplex value > 8 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_commercial_megaplex value > 9 }		
-		}
-		modifier = {
-			add = 50
+			add = 100
 			num_buildings = { type = building_galactic_stock_exchange value > 0 }		
-		}		
+		}
 		modifier = {
-			add = 2
+			add = 10
+			num_districts = { type = district_hab_commercial value > 1 }		
+		}
+		modifier = {
+			add = 20
 			num_districts = { type = district_hab_commercial value > 2 }		
 		}	
 		modifier = {
@@ -526,23 +230,23 @@ col_habitat_trade = {
 			num_districts = { type = district_hab_commercial value > 3 }		
 		}	
 		modifier = {
-			add = 2
+			add = 20
 			num_districts = { type = district_hab_commercial value > 4 }		
 		}
 		modifier = {
-			add = 3
+			add = 30
 			num_districts = { type = district_hab_commercial value > 5 }		
 		}	
 		modifier = {
-			add = 3
+			add = 30
 			num_districts = { type = district_hab_commercial value > 6 }		
 		}	
 		modifier = {
-			add = 50
+			add = 40
 			num_districts = { type = district_hab_commercial value > 7 }		
 		}	
 		modifier = {
-			add = 50
+			add = 40
 			num_districts = { type = district_hab_commercial value > 8 }		
 		}
 	}
@@ -568,87 +272,11 @@ col_habitat_leisure = {
 			has_planet_flag = cultural_habitat	
 		}
 		modifier = {
-			add = 2
-			num_buildings = { type = building_holo_theatres value > 0 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_holo_theatres value > 1 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_holo_theatres value > 2 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_holo_theatres value > 3 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_holo_theatres value > 4 }		
+			add = 10
+			num_districts = { type = district_hab_cultural value > 1 }		
 		}
 		modifier = {
-			add = 2
-			num_buildings = { type = building_holo_theatres value > 5 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_holo_theatres value > 6 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_holo_theatres value > 7 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_holo_theatres value > 8 }		
-		}	
-		modifier = {
-			add = 2
-			num_buildings = { type = building_holo_theatres value > 9 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_hyper_entertainment_forum value > 0 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_hyper_entertainment_forum value > 1 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_hyper_entertainment_forum value > 2 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_hyper_entertainment_forum value > 3 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_hyper_entertainment_forum value > 4 }		
-		}
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_hyper_entertainment_forum value > 5 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_hyper_entertainment_forum value > 6 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_hyper_entertainment_forum value > 7 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_hyper_entertainment_forum value > 8 }		
-		}	
-		modifier = {
-			add = 2.25
-			num_buildings = { type = building_hyper_entertainment_forum value > 9 }		
-		}	
-		modifier = {
-			add = 2
+			add = 20
 			num_districts = { type = district_hab_cultural value > 2 }		
 		}	
 		modifier = {
@@ -656,23 +284,23 @@ col_habitat_leisure = {
 			num_districts = { type = district_hab_cultural value > 3 }		
 		}	
 		modifier = {
-			add = 2
+			add = 20
 			num_districts = { type = district_hab_cultural value > 4 }		
 		}
 		modifier = {
-			add = 3
+			add = 30
 			num_districts = { type = district_hab_cultural value > 5 }		
 		}	
 		modifier = {
-			add = 3
+			add = 30
 			num_districts = { type = district_hab_cultural value > 6 }		
 		}	
 		modifier = {
-			add = 50
+			add = 40
 			num_districts = { type = district_hab_cultural value > 7 }		
 		}	
 		modifier = {
-			add = 50
+			add = 40
 			num_districts = { type = district_hab_cultural value > 8 }		
 		}
 	}
@@ -705,7 +333,7 @@ col_habitat_residential = {
 				has_planet_flag = research_habitat
 				has_planet_flag = void_habitat
 			}	
-			num_districts = { type = district_hab_housing value >= 4 }
+			num_districts = { type = district_hab_housing value > 4 }
 		}
 	}
 }
