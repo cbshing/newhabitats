@@ -11,11 +11,23 @@ col_habitat = {
 	
 	weight_modifier = {
 		modifier = {
-			add = 50
+			add = 500
 			NOR = { # Not void habitat
 				has_planet_flag = void_habitat
 			}
 			num_districts = { type = district_hab_housing value < 5 }
+			OR = {
+				has_planet_flag = energy_habitat
+				has_planet_flag = foundry_habitat
+				has_planet_flag = trade_habitat
+				has_planet_flag = cultural_habitat
+				has_planet_flag = research_habitat
+				num_districts = { type = district_hab_energy value < 1 }
+				num_districts = { type = district_hab_foundry value < 1 }
+				num_districts = { type = district_hab_science value < 1 }
+				num_districts = { type = district_hab_commercial value < 1 }
+				num_districts = { type = district_hab_cultural value < 1 }
+			}
 		}
 	}
 }
@@ -324,7 +336,7 @@ col_habitat_residential = {
 
 	weight_modifier = {
 		modifier = {
-			add = 100
+			add = 500
 			NOR = { # No planet specialization
 				has_planet_flag = energy_habitat
 				has_planet_flag = foundry_habitat
