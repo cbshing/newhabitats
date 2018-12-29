@@ -35,7 +35,7 @@
  decision_remove_research_district_habitat:0 "Remove Research District"
  decision_remove_research_district_habitat_desc:1 "This habitat will no longer be considered a research center, freeing up space for new constructions."
  decision_remove_research_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_science_plural$§! on this habitat"
- decision_remove_research_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_science_plural$§! slots on the habitat must be dismanteled"
+ decision_remove_science_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_science_plural$§! slots on the habitat must be dismanteled"
  
  decision_energy_district_habitat:0 "Establish $district_hab_energy$"
  decision_energy_district_habitat_desc:1 "This habitat will focus on collecting solar energy, enabling the construction of $district_hab_energy_plural$."

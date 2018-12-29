@@ -1,37 +1,5 @@
 #root = planet
 
-# Habitat General
-# Does Nothing, but Overwrites Default Habitat Colony Type
-col_habitat = {
-	icon = 12
-
-	potential = {
-		is_planet_class = pc_habitat
-	}
-	
-	weight_modifier = {
-		modifier = {
-			add = 500
-			NOR = { # Not void habitat
-				has_planet_flag = void_habitat
-			}
-			num_districts = { type = district_hab_housing value < 5 }
-			OR = {
-				has_planet_flag = energy_habitat
-				has_planet_flag = foundry_habitat
-				has_planet_flag = trade_habitat
-				has_planet_flag = cultural_habitat
-				has_planet_flag = research_habitat
-				num_districts = { type = district_hab_energy value < 1 }
-				num_districts = { type = district_hab_foundry value < 1 }
-				num_districts = { type = district_hab_science value < 1 }
-				num_districts = { type = district_hab_commercial value < 1 }
-				num_districts = { type = district_hab_cultural value < 1 }
-			}
-		}
-	}
-}
-
 # Generator Habitat
 # Increases Technician Production by 5%
 col_habitat_generator = {
@@ -63,7 +31,7 @@ col_habitat_generator = {
 			num_districts = { type = district_hab_energy value > 3 }		
 		}	
 		modifier = {
-			add = 20
+			add = 30
 			num_districts = { type = district_hab_energy value > 4 }		
 		}
 		modifier = {
@@ -124,7 +92,7 @@ col_habitat_foundry = {
 			num_districts = { type = district_hab_foundry value > 3 }		
 		}	
 		modifier = {
-			add = 20
+			add = 30
 			num_districts = { type = district_hab_foundry value > 4 }		
 		}
 		modifier = {
@@ -185,7 +153,7 @@ col_habitat_research = {
 			num_districts = { type = district_hab_science value > 3 }		
 		}	
 		modifier = {
-			add = 20
+			add = 30
 			num_districts = { type = district_hab_science value > 4 }		
 		}
 		modifier = {
@@ -242,7 +210,7 @@ col_habitat_trade = {
 			num_districts = { type = district_hab_commercial value > 3 }		
 		}	
 		modifier = {
-			add = 20
+			add = 30
 			num_districts = { type = district_hab_commercial value > 4 }		
 		}
 		modifier = {
@@ -296,7 +264,7 @@ col_habitat_leisure = {
 			num_districts = { type = district_hab_cultural value > 3 }		
 		}	
 		modifier = {
-			add = 20
+			add = 30
 			num_districts = { type = district_hab_cultural value > 4 }		
 		}
 		modifier = {
@@ -345,7 +313,44 @@ col_habitat_residential = {
 				has_planet_flag = research_habitat
 				has_planet_flag = void_habitat
 			}	
-			num_districts = { type = district_hab_housing value > 4 }
+			num_districts = { type = district_hab_housing value > 3 }
+		}
+	}
+}
+
+# Habitat General
+# Does Nothing, but Overwrites Default Habitat Colony Type
+col_habitat = {
+	icon = 12
+
+	potential = {
+		is_planet_class = pc_habitat
+	}
+	
+	weight_modifier = {
+		modifier = {
+			add = 500
+			NOR = { # Not void habitat
+				has_planet_flag = void_habitat
+			}
+			AND = {
+				num_districts = { type = district_hab_housing value > 3 }
+				OR = {
+					has_planet_flag = energy_habitat
+					has_planet_flag = foundry_habitat
+					has_planet_flag = trade_habitat
+					has_planet_flag = cultural_habitat
+					has_planet_flag = research_habitat
+					has_planet_flag = void_habitat
+				}
+			}
+			AND = {
+				num_districts = { type = district_hab_energy value < 3 }
+				num_districts = { type = district_hab_foundry value < 3 }
+				num_districts = { type = district_hab_science value < 3 }
+				num_districts = { type = district_hab_commercial value < 3 }
+				num_districts = { type = district_hab_cultural value < 3 }
+			}
 		}
 	}
 }
