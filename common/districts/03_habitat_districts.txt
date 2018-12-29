@@ -140,11 +140,11 @@ district_hab_energy = {
 		planet_housing_add = 2
 	}
 	
-	#scales to 25%
+	#scales to 20%
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_energy value = 1 }
+			num_districts = { type = district_hab_energy value = 4 }
 		}		
 		modifier = {
 			planet_jobs_energy_produces_mult = 0.05
@@ -153,7 +153,7 @@ district_hab_energy = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_energy value = 2 }
+			num_districts = { type = district_hab_energy value = 5 }
 		}		
 		modifier = {
 			planet_jobs_energy_produces_mult = 0.10
@@ -162,7 +162,7 @@ district_hab_energy = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_energy value = 3 }
+			num_districts = { type = district_hab_energy value = 6 }
 		}		
 		modifier = {
 			planet_jobs_energy_produces_mult = 0.15
@@ -171,19 +171,10 @@ district_hab_energy = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_energy value = 4 }
+			num_districts = { type = district_hab_energy value > 6 }
 		}		
 		modifier = {
 			planet_jobs_energy_produces_mult = 0.20
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			num_districts = { type = district_hab_energy value > 4 }
-		}		
-		modifier = {
-			planet_jobs_energy_produces_mult = 0.25
 		}
 	}
 	
@@ -508,7 +499,7 @@ district_hab_science = {
 		potential = {
 			exists = owner
 			owner = { is_regular_empire = yes }
-			num_districts = { type = district_hab_science value > 5 }
+			num_districts = { type = district_hab_science value > 4 }
 		}		
 		modifier = {
 			job_head_researcher_add = 1
@@ -519,7 +510,7 @@ district_hab_science = {
 		potential = {
 			exists = owner
 			owner = { is_hive_empire = yes } 
-			num_districts = { type = district_hab_science value > 5 }
+			num_districts = { type = district_hab_science value > 4 }
 		}		
 		modifier = {
 			job_brain_drone_add = 1
@@ -530,7 +521,7 @@ district_hab_science = {
 		potential = {
 			exists = owner
 			owner = { is_machine_empire = yes } 
-			num_districts = { type = district_hab_science value > 5 }
+			num_districts = { type = district_hab_science value > 4 }
 		}		
 		modifier = {
 			job_calculator_add = 1
@@ -595,7 +586,7 @@ district_hab_science = {
 		trigger = {
 			exists = owner
 			owner = { is_regular_empire = yes }
-			num_districts = { type = district_hab_science value > 5 }
+			num_districts = { type = district_hab_science value > 4 }
 		}		
 		text = job_head_researcher_effect_desc
 	}
@@ -667,7 +658,7 @@ district_hab_commercial = {
 		potential = {
 			exists = owner
 			owner = { is_regular_empire = yes }
-			num_districts = { type = district_hab_commercial value > 5 }
+			num_districts = { type = district_hab_commercial value > 4 }
 		}		
 		modifier = {
 			job_merchant_add = 1
@@ -682,7 +673,7 @@ district_hab_commercial = {
 		trigger = {
 			exists = owner
 			owner = { is_regular_empire = yes }
-			num_districts = { type = district_hab_commercial value > 5 }
+			num_districts = { type = district_hab_commercial value > 4 }
 		}		
 		text = job_merchant_effect_desc
 	}
@@ -753,11 +744,11 @@ district_hab_foundry = {
 		planet_housing_add = 2
 	}
 	
-	#scales to 25%
+	#scales to 20%
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_foundry value = 2 }
+			num_districts = { type = district_hab_foundry value = 4 }
 		}		
 		modifier = {
 			planet_metallurgists_produces_mult = 0.05
@@ -766,7 +757,7 @@ district_hab_foundry = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_foundry value = 3 }
+			num_districts = { type = district_hab_foundry value = 5 }
 		}		
 		modifier = {
 			planet_metallurgists_produces_mult = 0.10
@@ -775,7 +766,7 @@ district_hab_foundry = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_foundry value = 4 }
+			num_districts = { type = district_hab_foundry value = 6 }
 		}		
 		modifier = {
 			planet_metallurgists_produces_mult = 0.15
@@ -784,19 +775,10 @@ district_hab_foundry = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_foundry value = 5 }
-		}		
-		modifier = {
-			planet_metallurgists_produces_mult = 0.20
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			num_districts = { type = district_hab_foundry value > 6 }
 		}		
 		modifier = {
-			planet_metallurgists_produces_mult = 0.25
+			planet_metallurgists_produces_mult = 0.20
 		}
 	}
 	
