@@ -147,7 +147,7 @@ district_hab_energy = {
 			num_districts = { type = district_hab_energy value = 4 }
 		}		
 		modifier = {
-			planet_jobs_energy_produces_mult = 0.05
+			planet_jobs_energy_produces_mult = 0.01
 		}
 	}
 	triggered_planet_modifier = {
@@ -156,7 +156,7 @@ district_hab_energy = {
 			num_districts = { type = district_hab_energy value = 5 }
 		}		
 		modifier = {
-			planet_jobs_energy_produces_mult = 0.10
+			planet_jobs_energy_produces_mult = 0.02
 		}
 	}
 	triggered_planet_modifier = {
@@ -165,16 +165,25 @@ district_hab_energy = {
 			num_districts = { type = district_hab_energy value = 6 }
 		}		
 		modifier = {
-			planet_jobs_energy_produces_mult = 0.15
+			planet_jobs_energy_produces_mult = 0.03
 		}
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_energy value > 6 }
+			num_districts = { type = district_hab_energy value = 7 }
 		}		
 		modifier = {
-			planet_jobs_energy_produces_mult = 0.20
+			planet_jobs_energy_produces_mult = 0.04
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			num_districts = { type = district_hab_energy value > 7 }
+		}		
+		modifier = {
+			planet_jobs_energy_produces_mult = 0.05
 		}
 	}
 	
@@ -751,7 +760,7 @@ district_hab_foundry = {
 			num_districts = { type = district_hab_foundry value = 4 }
 		}		
 		modifier = {
-			planet_metallurgists_produces_mult = 0.05
+			planet_metallurgists_produces_mult = 0.01
 		}
 	}
 	triggered_planet_modifier = {
@@ -760,7 +769,7 @@ district_hab_foundry = {
 			num_districts = { type = district_hab_foundry value = 5 }
 		}		
 		modifier = {
-			planet_metallurgists_produces_mult = 0.10
+			planet_metallurgists_produces_mult = 0.02
 		}
 	}
 	triggered_planet_modifier = {
@@ -769,16 +778,25 @@ district_hab_foundry = {
 			num_districts = { type = district_hab_foundry value = 6 }
 		}		
 		modifier = {
-			planet_metallurgists_produces_mult = 0.15
+			planet_metallurgists_produces_mult = 0.03
 		}
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_foundry value > 6 }
+			num_districts = { type = district_hab_foundry value = 7 }
 		}		
 		modifier = {
-			planet_metallurgists_produces_mult = 0.20
+			planet_metallurgists_produces_mult = 0.04
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			num_districts = { type = district_hab_foundry value > 7 }
+		}		
+		modifier = {
+			planet_metallurgists_produces_mult = 0.05
 		}
 	}
 	
