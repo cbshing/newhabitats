@@ -1,7 +1,7 @@
 @hab_cost = 500
 @hab_maintenance = 2
 
-# housing adds 10 housing + 4 clerk jobs; or 2 maint. drone jobs
+# housing adds 10 housing + 2 clerk jobs; or 2 maint. drone jobs
 district_hab_housing = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
@@ -25,13 +25,49 @@ district_hab_housing = {
 	}
 	
 	planet_modifier = {
-		planet_housing_add = 12
+		planet_housing_add = 10
+	}
+	
+	#housing
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_voidborne }
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
 	}
 	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+	
+	#jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes 
+				has_ascension_perk = ap_voidborne
+				has_ascension_perk = ap_master_builders
+			}
 		}
 		modifier = {
 			job_maintenance_drone_add = 2
@@ -48,6 +84,21 @@ district_hab_housing = {
 		}
 		modifier = {
 			job_clerk_add = 4
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_fallen_empire = no
+				is_regular_empire = yes 
+				has_ascension_perk = ap_voidborne
+				has_ascension_perk = ap_master_builders
+			}
+		}
+		modifier = {
+			job_clerk_add = 1
 		}
 	}
 	
@@ -79,7 +130,7 @@ district_hab_housing = {
 	}
 }
 
-# energy adds 2 housing + 4 technician jobs; or 5 hive technician jobs; produces 10% more energy
+# energy adds 2 housing + 2 technician jobs; or 3 hive technician jobs
 district_hab_energy = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
@@ -113,17 +164,6 @@ district_hab_energy = {
 				}
 			}		
 		}
-		custom_tooltip = {
-			fail_text = "requires_no_black_hole_or_dyson_sphere"
-			solar_system = {
-				NOR = {
-					is_star_class = sc_black_hole
-					has_megastructure = dyson_sphere_3
-					has_megastructure = dyson_sphere_4
-					has_megastructure = dyson_sphere_5
-				}				
-			}
-		}
 	}
 	
 	resources = {
@@ -140,50 +180,31 @@ district_hab_energy = {
 		planet_housing_add = 2
 	}
 	
-	#scales to 20%
+	#housing
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_energy value = 4 }
+			OR = {
+				owner = { is_fallen_empire = yes }
+				owner = { has_ascension_perk = ap_voidborne }
+			}
 		}		
+		
 		modifier = {
-			planet_jobs_energy_produces_mult = 0.01
+			planet_housing_add = 2
 		}
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_energy value = 5 }
+			OR = {
+				owner = { is_fallen_empire = yes }
+				owner = { has_ascension_perk = ap_master_builders }
+			}
 		}		
+		
 		modifier = {
-			planet_jobs_energy_produces_mult = 0.02
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			num_districts = { type = district_hab_energy value = 6 }
-		}		
-		modifier = {
-			planet_jobs_energy_produces_mult = 0.03
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			num_districts = { type = district_hab_energy value = 7 }
-		}		
-		modifier = {
-			planet_jobs_energy_produces_mult = 0.04
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			num_districts = { type = district_hab_energy value > 7 }
-		}		
-		modifier = {
-			planet_jobs_energy_produces_mult = 0.05
+			planet_housing_add = 2
 		}
 	}
 	
@@ -195,10 +216,9 @@ district_hab_energy = {
 		}		
 		
 		modifier = {
-			job_technician_drone_add = 4
+			job_technician_drone_add = 2
 		}
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -206,10 +226,9 @@ district_hab_energy = {
 		}	
 		
 		modifier = {
-			job_technician_drone_add = 5
+			job_technician_drone_add = 3
 		}
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -219,10 +238,9 @@ district_hab_energy = {
 			}
 		}
 		modifier = {
-			job_technician_add = 4
+			job_technician_add = 2
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -230,6 +248,47 @@ district_hab_energy = {
 		}
 		modifier = {
 			job_fe_acolyte_generator_add = 4
+		}
+	}
+	
+	# voidborne jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_machine_empire = yes 
+				has_ascension_perk = ap_voidborne 
+			}
+		}		
+		
+		modifier = {
+			job_technician_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_hive_empire = yes 
+				has_ascension_perk = ap_voidborne 
+			}
+		}	
+		
+		modifier = {
+			job_technician_drone_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+				has_ascension_perk = ap_voidborne 
+			}
+		}
+		modifier = {
+			job_technician_add = 2
 		}
 	}
 
@@ -363,10 +422,21 @@ district_hab_cultural = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_cultural value > 2 }
-		}		
+			owner = { has_ascension_perk = ap_voidborne }
+		}
 		modifier = {
-			planet_amenities_add = 1
+			planet_housing_add = 2
+			job_entertainer_add = 4
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+		modifier = {
+			planet_housing_add = 2
 		}
 	}
 	
@@ -456,7 +526,7 @@ district_hab_cultural = {
 	}
 }
 
-# research adds 2 housing + 5 researcher jobs
+# research adds 2 housing + 2 researcher jobs
 district_hab_science = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
@@ -504,36 +574,24 @@ district_hab_science = {
 		planet_housing_add = 2
 	}
 	
+	#housing
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_regular_empire = yes }
-			num_districts = { type = district_hab_science value > 4 }
-		}		
+			owner = { has_ascension_perk = ap_voidborne }
+		}
 		modifier = {
-			job_head_researcher_add = 1
+			planet_housing_add = 2
 		}
 	}
 	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_hive_empire = yes } 
-			num_districts = { type = district_hab_science value > 4 }
-		}		
-		modifier = {
-			job_brain_drone_add = 1
+			owner = { has_ascension_perk = ap_master_builders }
 		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes } 
-			num_districts = { type = district_hab_science value > 4 }
-		}		
 		modifier = {
-			job_calculator_add = 1
+			planet_housing_add = 2
 		}
 	}
 	
@@ -543,7 +601,7 @@ district_hab_science = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = 5
+			job_researcher_add = 3
 		}
 	}
 	
@@ -553,7 +611,7 @@ district_hab_science = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = 5
+			job_brain_drone_add = 3
 		}
 	}
 	
@@ -563,7 +621,45 @@ district_hab_science = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {	
-			job_calculator_add = 5
+			job_calculator_add = 3
+		}
+	}
+	
+	#jobs voidborne
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_regular_empire = yes 
+				has_ascension_perk = ap_voidborne 
+			}
+		}
+		modifier = {
+			job_researcher_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_hive_empire = yes 
+				has_ascension_perk = ap_voidborne 
+			}
+		}
+		modifier = {
+			job_brain_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+				has_ascension_perk = ap_voidborne 
+			}
+		}
+		modifier = {	
+			job_calculator_add = 2
 		}
 	}
 	
@@ -589,15 +685,6 @@ district_hab_science = {
 			owner = { is_machine_empire = yes } 
 		}
 		text = job_calculator_effect_desc
-	}
-	
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-			num_districts = { type = district_hab_science value > 4 }
-		}		
-		text = job_head_researcher_effect_desc
 	}
 	
 	ai_weight = {
@@ -660,7 +747,29 @@ district_hab_commercial = {
 		
 	planet_modifier = {
 		planet_housing_add = 2
-		job_clerk_add = 8
+		job_clerk_add = 4
+	}
+	
+	#housing
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_voidborne }
+		}
+		modifier = {
+			planet_housing_add = 2
+			job_clerk_add = 4
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
 	}
 	
 	triggered_planet_modifier = {
@@ -753,60 +862,35 @@ district_hab_foundry = {
 		planet_housing_add = 2
 	}
 	
-	#scales to 20%
+	#housing
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			num_districts = { type = district_hab_foundry value = 4 }
-		}		
-		modifier = {
-			planet_metallurgists_produces_mult = 0.01
+			owner = { has_ascension_perk = ap_voidborne }
 		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			num_districts = { type = district_hab_foundry value = 5 }
-		}		
 		modifier = {
-			planet_metallurgists_produces_mult = 0.02
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			num_districts = { type = district_hab_foundry value = 6 }
-		}		
-		modifier = {
-			planet_metallurgists_produces_mult = 0.03
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			num_districts = { type = district_hab_foundry value = 7 }
-		}		
-		modifier = {
-			planet_metallurgists_produces_mult = 0.04
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			num_districts = { type = district_hab_foundry value > 7 }
-		}		
-		modifier = {
-			planet_metallurgists_produces_mult = 0.05
+			planet_housing_add = 2
 		}
 	}
 	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	#jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_alloy_drone_add = 5
+			job_alloy_drone_add = 3
 		}
 	}
 	
@@ -816,17 +900,54 @@ district_hab_foundry = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_fabricator_add = 6
+			job_fabricator_add = 4
 		}
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_foundry_add = 5
+			job_foundry_add = 3
+		}
+	}
+	
+	#jobs voidborne
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_hive_empire = yes
+				has_ascension_perk = ap_voidborne 
+			}
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_machine_empire = yes 
+				has_ascension_perk = ap_voidborne 
+			}
+		}
+		modifier = {
+			job_fabricator_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_regular_empire = yes 
+				has_ascension_perk = ap_voidborne 
+			}
+		}
+		modifier = {
+			job_foundry_add = 2
 		}
 	}
 	
