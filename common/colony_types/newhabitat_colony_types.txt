@@ -243,12 +243,7 @@ col_habitat_leisure = {
 	
 	planet_modifier = {
 		planet_immigration_pull_mult = 0.15
-		planet_amenities_add = 5
-		solar_system = {
-			every_owned_planet = {
-				planet_modifier = { planet_amenities_add = 5 }
-			}
-		}
+		planet_amenities_add = 10
 	}
 
 	weight_modifier = {
