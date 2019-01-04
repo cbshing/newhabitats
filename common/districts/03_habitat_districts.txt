@@ -180,6 +180,43 @@ district_hab_energy = {
 		planet_housing_add = 2
 	}
 	
+	# Output modifier
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				NOR = {
+					is_star_class = sc_black_hole
+					has_megastructure = dyson_sphere_3
+					has_megastructure = dyson_sphere_4
+					has_megastructure = dyson_sphere_5
+				}				
+			}
+		}
+		modifier = {
+			planet_technician_produces_mult = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			custom_tooltip = {
+				text = "black_hole_or_dyson_sphere_reduce_output"
+				solar_system = {
+					OR = {
+						is_star_class = sc_black_hole
+						has_megastructure = dyson_sphere_3
+						has_megastructure = dyson_sphere_4
+						has_megastructure = dyson_sphere_5
+					}				
+				}
+			}
+		}
+		modifier = {
+			planet_technician_produces_mult = -0.5
+		}
+	}
+	
+	
+	
 	#housing
 	triggered_planet_modifier = {
 		potential = {
@@ -216,7 +253,7 @@ district_hab_energy = {
 		}		
 		
 		modifier = {
-			job_technician_drone_add = 3
+			job_technician_drone_add = 2
 		}
 	}
 	triggered_planet_modifier = {
@@ -226,7 +263,7 @@ district_hab_energy = {
 		}	
 		
 		modifier = {
-			job_technician_drone_add = 4
+			job_technician_drone_add = 3
 		}
 	}
 	triggered_planet_modifier = {
@@ -238,7 +275,7 @@ district_hab_energy = {
 			}
 		}
 		modifier = {
-			job_technician_add = 3
+			job_technician_add = 2
 		}
 	}
 	triggered_planet_modifier = {
@@ -262,7 +299,7 @@ district_hab_energy = {
 		}		
 		
 		modifier = {
-			job_technician_drone_add = 1
+			job_technician_drone_add = 2
 		}
 	}
 	triggered_planet_modifier = {
@@ -275,7 +312,7 @@ district_hab_energy = {
 			}
 		}
 		modifier = {
-			job_technician_add = 1
+			job_technician_add = 2
 		}
 	}
 
