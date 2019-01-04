@@ -176,7 +176,7 @@ col_habitat_research = {
 }
 
 # Trade Habitat
-# Trade Value Multiplier 10%
+# 2 Merchant Jobs
 col_habitat_trade = {
 	icon = 12
 
@@ -185,8 +185,12 @@ col_habitat_trade = {
 	}
 	
 	planet_modifier = {
-		trade_value_mult = 0.1
+		job_merchant_add = 2
 	}
+	
+	triggered_desc = {
+		text = job_merchant_effect_desc
+	}	
 
 	weight_modifier = {
 		modifier = {
@@ -206,27 +210,27 @@ col_habitat_trade = {
 			num_districts = { type = district_hab_commercial value > 2 }		
 		}	
 		modifier = {
-			add = 20
+			add = 30
 			num_districts = { type = district_hab_commercial value > 3 }		
 		}	
 		modifier = {
-			add = 30
+			add = 40
 			num_districts = { type = district_hab_commercial value > 4 }		
 		}
 		modifier = {
-			add = 30
+			add = 40
 			num_districts = { type = district_hab_commercial value > 5 }		
 		}	
 		modifier = {
-			add = 30
+			add = 40
 			num_districts = { type = district_hab_commercial value > 6 }		
 		}	
 		modifier = {
-			add = 40
+			add = 50
 			num_districts = { type = district_hab_commercial value > 7 }		
 		}	
 		modifier = {
-			add = 40
+			add = 50
 			num_districts = { type = district_hab_commercial value > 8 }		
 		}
 	}
@@ -287,7 +291,7 @@ col_habitat_leisure = {
 }
 
 # Residential Habitat
-# Increases Pop Growth Speed by 10%, Increases Planet Amenities by 5
+# Increases Pop Growth Speed by 5%, Increases Planet Amenities by 5
 col_habitat_residential = {
 	icon = 12
 
@@ -358,17 +362,6 @@ col_habitat = {
 				has_planet_flag = void_habitat
 			}
 			AND = {
-				num_districts = { type = district_hab_housing value > 3 }
-				OR = {
-					has_planet_flag = energy_habitat
-					has_planet_flag = foundry_habitat
-					has_planet_flag = trade_habitat
-					has_planet_flag = cultural_habitat
-					has_planet_flag = research_habitat
-					has_planet_flag = void_habitat
-				}
-			}
-			AND = {
 				num_districts = { type = district_hab_energy value < 3 }
 				num_districts = { type = district_hab_foundry value < 3 }
 				num_districts = { type = district_hab_science value < 3 }
@@ -381,7 +374,8 @@ col_habitat = {
 
 # Void Habitat
 # Origins Civics
-# Increases Pop Growth Speed by 25%
+# Increases Pop Growth Speed by 5%
+# Increases Worker Pop Output by 5%
 col_habitat_void = {
 	icon = 12
 
@@ -391,6 +385,8 @@ col_habitat_void = {
 	
 	planet_modifier = {
 		pop_growth_speed = 0.05
+		planet_jobs_worker_produces_mult = 0.05
+		planet_jobs_slave_produces_mult = 0.05
 	}
 
 	weight_modifier = {
