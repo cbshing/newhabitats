@@ -4,12 +4,14 @@
  district_hab_foundry_plural:0 "Foundry Districts"
  district_hab_foundry_desc:1 "Direct access to micro-gravity and the hard vacuum of space allows for smelters and metallurgists to employ innovate manufacturing techniques on this Habitat."
  
+ black_hole_or_dyson_sphere_reduce_output:0 "The lack of solar radiation reduces the amount of freely available energy collected by this Habitat."
+ 
  has_decision_energy_habitat:0 "Has allowed construction of $district_hab_energy_plural$"
  has_decision_cultural_habitat:0 "Has allowed construction of $district_hab_cultural_plural$"
  has_decision_research_habitat:0 "Has allowed construction of $district_hab_science_plural$"
  has_decision_trade_habitat:0 "Has allowed construction of $district_hab_commercial$"
  has_decision_foundry_habitat:0 "Has allowed construction of $district_hab_foundry_plural$"
- 
+  
  decision_no_free_districts:0 "£trigger_no£ There are no free district slots."
  decision_district_habitat_too_many_districts:0 "£trigger_no£ This habitat has too many districts built on it."
  
@@ -53,8 +55,8 @@
  decision_remove_foundry_district_habitat_effects_short:0 "Disables construction of £district£ §Y$district_hab_foundry_plural$§! on this habitat"
  decision_remove_foundry_habitat_requirements:0 "£trigger_no£ §RAll §Y$district_hab_foundry_plural$§! slots on the habitat must be dismanteled"
 
- col_habitat_generator:0 "Generator Habitat"
- col_habitat_generator_desc:1 "An artificial deep-space structure humming with complexes of generator plants converting solar energy."
+ col_habitat_generator:0 "Reactor Habitat"
+ col_habitat_generator_desc:1 "An artificial deep-space structure with numerous reactor bays generating energy."
  col_habitat_foundry:0 "Foundry Habitat"
  col_habitat_foundry_desc:1 "An artificial deep-space foundry tooled towards the processing of raw materials into alloys."
  col_habitat_research:0 "Research Habitat"
