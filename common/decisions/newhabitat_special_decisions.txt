@@ -34,26 +34,28 @@ decision_trade_district_habitat = {
 		}
 		custom_tooltip = {
 			fail_text = decision_district_habitat_too_many_districts
-			NOR = {
-				AND = {
-					has_planet_flag = cultural_habitat
-					has_planet_flag = research_habitat
-					has_planet_flag = generator_habitat
-				}
-				AND = {
-					has_planet_flag = cultural_habitat
-					has_planet_flag = research_habitat
-					has_planet_flag = foundry_habitat
-				}
-				AND = {
-					has_planet_flag = cultural_habitat
-					has_planet_flag = generator_habitat
-					has_planet_flag = foundry_habitat
-				}
-				AND = {
-					has_planet_flag = research_habitat
-					has_planet_flag = generator_habitat
-					has_planet_flag = foundry_habitat
+			hidden_trigger = {
+				NOR = {
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = generator_habitat
+					}
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = research_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
 				}
 			}
 		}
@@ -133,26 +135,28 @@ decision_cultural_district_habitat = {
 		}
 		custom_tooltip = {
 			fail_text = decision_district_habitat_too_many_districts
-			NOR = {
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = research_habitat
-					has_planet_flag = generator_habitat
-				}
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = research_habitat
-					has_planet_flag = foundry_habitat
-				}
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = generator_habitat
-					has_planet_flag = foundry_habitat
-				}
-				AND = {
-					has_planet_flag = research_habitat
-					has_planet_flag = generator_habitat
-					has_planet_flag = foundry_habitat
+			hidden_trigger = {
+				NOR = {
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = generator_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = research_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
 				}
 			}
 		}
@@ -229,26 +233,28 @@ decision_research_district_habitat = {
 		}
 		custom_tooltip = {
 			fail_text = decision_district_habitat_too_many_districts
-			NOR = {
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = cultural_habitat
-					has_planet_flag = generator_habitat
-				}
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = cultural_habitat
-					has_planet_flag = foundry_habitat
-				}
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = generator_habitat
-					has_planet_flag = foundry_habitat
-				}
-				AND = {
-					has_planet_flag = cultural_habitat
-					has_planet_flag = generator_habitat
-					has_planet_flag = foundry_habitat
+			hidden_trigger = {
+				NOR = {
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = generator_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
 				}
 			}
 		}
@@ -325,26 +331,28 @@ decision_energy_district_habitat = {
 		}
 		custom_tooltip = {
 			fail_text = decision_district_habitat_too_many_districts
-			NOR = {
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = cultural_habitat
-					has_planet_flag = research_habitat
-				}
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = cultural_habitat
-					has_planet_flag = foundry_habitat
-				}
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = research_habitat
-					has_planet_flag = foundry_habitat
-				}
-				AND = {
-					has_planet_flag = cultural_habitat
-					has_planet_flag = research_habitat
-					has_planet_flag = foundry_habitat
+			hidden_trigger = {
+				NOR = {
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
 				}
 			}
 		}
@@ -421,26 +429,28 @@ decision_foundry_district_habitat = {
 		}
 		custom_tooltip = {
 			fail_text = decision_district_habitat_too_many_districts
-			NOR = {
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = cultural_habitat
-					has_planet_flag = research_habitat
-				}
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = cultural_habitat
-					has_planet_flag = energy_habitat
-				}
-				AND = {
-					has_planet_flag = trade_habitat
-					has_planet_flag = research_habitat
-					has_planet_flag = energy_habitat
-				}
-				AND = {
-					has_planet_flag = cultural_habitat
-					has_planet_flag = research_habitat
-					has_planet_flag = energy_habitat
+			hidden_trigger = {
+				NOR = {
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = energy_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = energy_habitat
+					}
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = energy_habitat
+					}
 				}
 			}
 		}
