@@ -185,12 +185,13 @@ col_habitat_trade = {
 	}
 	
 	planet_modifier = {
-		job_merchant_add = 2
+		#job_merchant_add = 2
+		trade_value_add = 10
 	}
 	
-	triggered_desc = {
-		text = job_merchant_effect_desc
-	}	
+	#triggered_desc = {
+	#	text = job_merchant_effect_desc
+	#}	
 
 	weight_modifier = {
 		modifier = {

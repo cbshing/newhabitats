@@ -32,7 +32,7 @@ district_hab_housing = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_ascension_perk = ap_voidborne }
+			owner = { has_ascension_perk = ap_voidborn }
 		}
 		modifier = {
 			planet_housing_add = 2
@@ -65,7 +65,7 @@ district_hab_housing = {
 			exists = owner
 			owner = { 
 				is_gestalt = yes 
-				has_ascension_perk = ap_voidborne
+				has_ascension_perk = ap_voidborn
 				has_ascension_perk = ap_master_builders
 			}
 		}
@@ -93,7 +93,7 @@ district_hab_housing = {
 			owner = { 
 				is_fallen_empire = no
 				is_regular_empire = yes 
-				has_ascension_perk = ap_voidborne
+				has_ascension_perk = ap_voidborn
 				has_ascension_perk = ap_master_builders
 			}
 		}
@@ -223,7 +223,7 @@ district_hab_energy = {
 			exists = owner
 			OR = {
 				owner = { is_fallen_empire = yes }
-				owner = { has_ascension_perk = ap_voidborne }
+				owner = { has_ascension_perk = ap_voidborn }
 			}
 		}		
 		
@@ -294,7 +294,7 @@ district_hab_energy = {
 			exists = owner
 			owner = { 
 				is_gestalt = yes
-				has_ascension_perk = ap_voidborne 
+				has_ascension_perk = ap_voidborn 
 			}
 		}		
 		
@@ -308,7 +308,7 @@ district_hab_energy = {
 			owner = { 
 				is_gestalt = no
 				is_fallen_empire_spiritualist = no
-				has_ascension_perk = ap_voidborne 
+				has_ascension_perk = ap_voidborn 
 			}
 		}
 		modifier = {
@@ -446,7 +446,7 @@ district_hab_cultural = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_ascension_perk = ap_voidborne }
+			owner = { has_ascension_perk = ap_voidborn }
 		}
 		modifier = {
 			planet_housing_add = 2
@@ -602,7 +602,7 @@ district_hab_science = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_ascension_perk = ap_voidborne }
+			owner = { has_ascension_perk = ap_voidborn }
 		}
 		modifier = {
 			planet_housing_add = 2
@@ -655,7 +655,7 @@ district_hab_science = {
 			exists = owner
 			owner = { 
 				is_regular_empire = yes 
-				has_ascension_perk = ap_voidborne 
+				has_ascension_perk = ap_voidborn 
 			}
 		}
 		modifier = {
@@ -667,7 +667,7 @@ district_hab_science = {
 			exists = owner
 			owner = { 
 				is_hive_empire = yes 
-				has_ascension_perk = ap_voidborne 
+				has_ascension_perk = ap_voidborn 
 			}
 		}
 		modifier = {
@@ -679,7 +679,7 @@ district_hab_science = {
 			exists = owner
 			owner = { 
 				is_machine_empire = yes
-				has_ascension_perk = ap_voidborne 
+				has_ascension_perk = ap_voidborn 
 			}
 		}
 		modifier = {	
@@ -778,7 +778,7 @@ district_hab_commercial = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_ascension_perk = ap_voidborne }
+			owner = { has_ascension_perk = ap_voidborn }
 		}
 		modifier = {
 			planet_housing_add = 2
@@ -870,7 +870,7 @@ district_hab_foundry = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_ascension_perk = ap_voidborne }
+			owner = { has_ascension_perk = ap_voidborn }
 		}
 		modifier = {
 			planet_housing_add = 2
@@ -923,7 +923,7 @@ district_hab_foundry = {
 			exists = owner
 			owner = { 
 				is_hive_empire = yes
-				has_ascension_perk = ap_voidborne 
+				has_ascension_perk = ap_voidborn 
 			}
 		}
 		modifier = {
@@ -935,7 +935,7 @@ district_hab_foundry = {
 			exists = owner
 			owner = { 
 				is_machine_empire = yes 
-				has_ascension_perk = ap_voidborne 
+				has_ascension_perk = ap_voidborn 
 			}
 		}
 		modifier = {
@@ -947,7 +947,7 @@ district_hab_foundry = {
 			exists = owner
 			owner = { 
 				is_regular_empire = yes 
-				has_ascension_perk = ap_voidborne 
+				has_ascension_perk = ap_voidborn 
 			}
 		}
 		modifier = {
