@@ -162,7 +162,8 @@ district_hab_energy = {
 					has_planet_flag = research_habitat
 					has_planet_flag = foundry_habitat
 				}
-			}		
+			}	
+			hidden_trigger = { num_districts = { type = district_hab_energy value > 0 } }	
 		}
 	}
 	
@@ -424,7 +425,8 @@ district_hab_cultural = {
 					has_planet_flag = research_habitat
 					has_planet_flag = foundry_habitat
 				}
-			}		
+			}
+			hidden_trigger = { num_districts = { type = district_hab_cultural value > 0 } }			
 		}
 	}
 	
@@ -581,6 +583,7 @@ district_hab_science = {
 					has_planet_flag = foundry_habitat
 				}
 			}		
+			hidden_trigger = { num_districts = { type = district_hab_science value > 0 } }
 		}
 	}
 	
@@ -755,7 +758,8 @@ district_hab_commercial = {
 					has_planet_flag = cultural_habitat
 					has_planet_flag = foundry_habitat
 				}
-			}		
+			}
+			hidden_trigger = { num_districts = { type = district_hab_commercial value > 0 } }	
 		}
 	}
 	
