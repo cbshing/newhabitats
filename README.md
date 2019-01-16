@@ -1,7 +1,7 @@
 # newhabitats
 # mod for Stellaris
 #
-# While tinkering with some mechanics to remake Voidborne in the Origins Civics mod, I reworked the Habitat system.  This mod focuses on Habitats and Habitat Districts.  Habitats can now be customizable via Planetary Decisions.  Habitats now give jobs comparable to Tier2 buildings and provide some housing in each District. Now most buildings are available to be built on a habitat. You also have access to the new Foundry District, which provides metallurgist jobs and the Reactor District for non-gestalt empires.  Have fun living in the void!
+# Unsatisfied with how habitats work in 2.2 in preparation for remaking Voidborne in the Origins Civics mod, I reworked the Habitat system.  This mod focuses on Habitats and Habitat Districts.  Habitats can now be customizable via Planetary Decisions.  Habitats now give jobs comparable to Tier2 buildings and provide some housing in each District. Now most buildings are available to be built on a habitat. You also have access to the new Foundry District, which provides metallurgist jobs and the Reactor District for non-gestalt empires.  Have fun living in the void!
 #
 #################################
 #         New Features          #
@@ -34,4 +34,4 @@
 #################################
 #         Known Bugs            #
 #################################
-# When removing a Habitat District, Icon for District remains even though it cannot be built. If a district is created on habitat, it will disappear. Anyone know how to fix this?
+# When removing a Habitat District, Icon for District remains even though it cannot be built. If a new district is created on the habitat, it will disappear. Anyone know how to fix this?
