@@ -96,6 +96,7 @@ decision_remove_trade_district_habitat = {
 	
 	effect = {
 		hidden_effect = { remove_planet_flag = trade_habitat remove_district = district_hab_commercial }
+		#hidden_effect = { validate_planet_buildings_and_districts = yes }
 	}
 	
 	ai_weight = {
@@ -197,6 +198,7 @@ decision_remove_cultural_district_habitat = {
 	
 	effect = {
 		hidden_effect = { remove_planet_flag = cultural_habitat remove_district = district_hab_cultural }
+		#hidden_effect = { validate_planet_buildings_and_districts = yes }
 	}
 	
 	ai_weight = {
@@ -295,6 +297,7 @@ decision_remove_research_district_habitat = {
 	
 	effect = {
 		hidden_effect = { remove_planet_flag = research_habitat remove_district = district_hab_science }
+		#hidden_effect = { validate_planet_buildings_and_districts = yes }
 	}
 	
 	ai_weight = {
@@ -393,6 +396,7 @@ decision_remove_energy_district_habitat = {
 	
 	effect = {
 		hidden_effect = { remove_planet_flag = energy_habitat remove_district = district_hab_energy }
+		#hidden_effect = { validate_planet_buildings_and_districts = yes }
 	}
 	
 	ai_weight = {
@@ -491,6 +495,7 @@ decision_remove_foundry_district_habitat = {
 	
 	effect = {
 		hidden_effect = { remove_planet_flag = foundry_habitat remove_district = district_hab_foundry }
+		#hidden_effect = { validate_planet_buildings_and_districts = yes }
 	}
 	
 	ai_weight = {

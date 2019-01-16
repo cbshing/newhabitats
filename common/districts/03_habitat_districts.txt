@@ -147,20 +147,26 @@ district_hab_energy = {
 		OR = {
 			custom_tooltip = {
 				fail_text = "has_decision_energy_habitat"
-				has_planet_flag = energy_habitat
-				owner = { is_ai = no }
+				hidden_trigger = { 
+					has_planet_flag = energy_habitat
+					owner = { is_ai = no }
+				}
 			}
 			AND = { #ai gets it if is energy_habitat flag anyway
-				owner = { is_ai = yes }
-				has_planet_flag = energy_habitat
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					has_planet_flag = energy_habitat
+				}
 			}
 			AND = { #ai gets free pass to district, always need energy
-				owner = { is_ai = yes }
-				NOR = { # if converted from human
-					has_planet_flag = trade_habitat
-					has_planet_flag = cultural_habitat
-					has_planet_flag = research_habitat
-					has_planet_flag = foundry_habitat
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					NOR = { # if converted from human
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
 				}
 			}	
 			hidden_trigger = { num_districts = { type = district_hab_energy value > 0 } }	
@@ -410,20 +416,26 @@ district_hab_cultural = {
 		OR = {
 			custom_tooltip = {
 				fail_text = "has_decision_cultural_habitat"
-				has_planet_flag = cultural_habitat
-				owner = { is_ai = no }
+				hidden_trigger = {
+					has_planet_flag = cultural_habitat
+					owner = { is_ai = no }
+				}
 			}
 			AND = { #ai gets it if is cultural_habitat flag anyway
-				owner = { is_ai = yes }
-				has_planet_flag = cultural_habitat
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					has_planet_flag = cultural_habitat
+				}
 			}
 			AND = { #ai uses if not gestalt, not sure if useful district
-				owner = { is_ai = yes }
-				NOR = { # if converted from human
-					has_planet_flag = trade_habitat
-					has_planet_flag = energy_habitat
-					has_planet_flag = research_habitat
-					has_planet_flag = foundry_habitat
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					NOR = { # if converted from human
+						has_planet_flag = trade_habitat
+						has_planet_flag = energy_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
 				}
 			}
 			hidden_trigger = { num_districts = { type = district_hab_cultural value > 0 } }			
@@ -567,20 +579,26 @@ district_hab_science = {
 		OR = {
 			custom_tooltip = {
 				fail_text = "has_decision_research_habitat"
-				has_planet_flag = research_habitat
-				owner = { is_ai = no }
+				hidden_trigger = {
+					has_planet_flag = research_habitat
+					owner = { is_ai = no }
+				}
 			}
 			AND = { #ai gets it if is research_habitat flag anyway
-				owner = { is_ai = yes }
-				has_planet_flag = research_habitat
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					has_planet_flag = research_habitat
+				}
 			}
 			AND = { #ai gets free pass to district, research is good
-				owner = { is_ai = yes }
-				NOR = { # if converted from human
-					has_planet_flag = trade_habitat
-					has_planet_flag = energy_habitat
-					has_planet_flag = cultural_habitat
-					has_planet_flag = foundry_habitat
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					NOR = { # if converted from human
+						has_planet_flag = trade_habitat
+						has_planet_flag = energy_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = foundry_habitat
+					}
 				}
 			}		
 			hidden_trigger = { num_districts = { type = district_hab_science value > 0 } }
@@ -743,20 +761,26 @@ district_hab_commercial = {
 		OR = {
 			custom_tooltip = {
 				fail_text = "has_decision_trade_habitat"
-				has_planet_flag = trade_habitat
-				owner = { is_ai = no }
+				hidden_trigger = {
+					has_planet_flag = trade_habitat
+					owner = { is_ai = no }
+				}
 			}
 			AND = { #ai gets it if is trade_habitat flag anyway
-				owner = { is_ai = yes }
-				has_planet_flag = trade_habitat
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					has_planet_flag = trade_habitat
+				}
 			}
 			AND = { #ai corporate gets trade habitats
-				owner = { is_ai = yes has_authority = auth_corporate }
-				NOR = { # if converted from human
-					has_planet_flag = research_habitat
-					has_planet_flag = energy_habitat
-					has_planet_flag = cultural_habitat
-					has_planet_flag = foundry_habitat
+				hidden_trigger = {
+					owner = { is_ai = yes has_authority = auth_corporate }
+					NOR = { # if converted from human
+						has_planet_flag = research_habitat
+						has_planet_flag = energy_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = foundry_habitat
+					}
 				}
 			}
 			hidden_trigger = { num_districts = { type = district_hab_commercial value > 0 } }	
@@ -837,20 +861,26 @@ district_hab_foundry = {
 		OR = {
 			custom_tooltip = {
 				fail_text = "has_decision_foundry_habitat"
-				has_planet_flag = foundry_habitat
-				owner = { is_ai = no }
+				hidden_trigger = {
+					has_planet_flag = foundry_habitat
+					owner = { is_ai = no }
+				}
 			}
 			AND = { #ai gets it if is foundry_habitat flag anyway
-				owner = { is_ai = yes }
-				has_planet_flag = foundry_habitat
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					has_planet_flag = foundry_habitat
+				}
 			}
 			AND = { #ai gestalt empires only get foundry
-				owner = { is_ai = yes is_gestalt = yes }
-				NOR = { # if converted from human
-					has_planet_flag = research_habitat
-					has_planet_flag = energy_habitat
-					has_planet_flag = cultural_habitat
-					has_planet_flag = trade_habitat
+				hidden_trigger = {
+					owner = { is_ai = yes is_gestalt = yes }
+					NOR = { # if converted from human
+						has_planet_flag = research_habitat
+						has_planet_flag = energy_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = trade_habitat
+					}
 				}
 			}
 		}
