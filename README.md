@@ -26,7 +26,7 @@
 # -03_habitat_districts
 # Following assets in files are overwritten:
 # -colony_hab (habitat colony type)
-# -research_lab_1, commercial_zone, luxury_residences, holo_theatres, energy_grid (buildings)
+# -research_lab_1, commercial_zone, luxury_residences, paradise dome, communal housing, large communal housing, holo_theatres, energy_grid (buildings)
 # Planetary Decisions have no AI weighting, and AI has default habitat layout designs (should check Glavis AI if any help possible since AI was not smart enough to use decisions in limited testing)
 # -AI Default layouts are: Reactor, Foundry, Research (Gestalt), Reactor, Research, Leisure (Regular), Reactor, Leisure, Trade (Megacorp)
 # -AI Default layouts can be modified by planet flags (energy_habitat, foundry_habitat, research_habitat, cultural_habitat, trade_habitat)
